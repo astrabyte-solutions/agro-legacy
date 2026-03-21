@@ -216,28 +216,26 @@
             </div>
         </section>
 
-        <!-- Section 3: Map Integration -->
-        <section id="map-section" class="w-full h-[380px] md:h-[450px] relative bg-gray-200 overflow-hidden">
-            <div class="absolute inset-0 z-0">
-                <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/dbcc35bcb2-0bc47cdd61389701bf66.png" alt="Stylized professional map interface showing global trade routes and office location in Mumbai India" />
-                <!-- Overlay for readability/branding -->
-                <div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
-            </div>
-            
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-                <div class="bg-white p-4 rounded-full shadow-2xl animate-bounce">
-                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                        <i class="fa-solid fa-location-dot text-accent text-xl"></i>
+        <section id="business-details" class="py-14 bg-white border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-heading font-bold text-primary mb-2">Business Details</h3>
+                    <p class="text-gray-600">Key contact information for inquiries, orders, and business communication.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <div class="bg-beige/40 border border-gray-100 rounded-2xl p-6">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">Address</p>
+                        <p class="text-gray-700">329/2 Nemawar Road, Palda,<br>Idhyog Nagar, Indore (M.P.)</p>
+                    </div>
+                    <div class="bg-beige/40 border border-gray-100 rounded-2xl p-6">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">Phone / WhatsApp</p>
+                        <p class="text-gray-700">+91 6261605175</p>
+                    </div>
+                    <div class="bg-beige/40 border border-gray-100 rounded-2xl p-6">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">Email</p>
+                        <p class="text-gray-700">export@surendrapulses.com</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-xl bg-white/95 backdrop-blur-md px-5 py-3 sm:px-8 sm:py-4 rounded-2xl sm:rounded-full shadow-xl border border-accent/20 flex items-center justify-center gap-3 sm:gap-4">
-                <div class="flex -space-x-2">
-                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" class="w-8 h-8 rounded-full border-2 border-white" alt="Team">
-                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-6.jpg" class="w-8 h-8 rounded-full border-2 border-white" alt="Team">
-                </div>
-                <p class="text-xs sm:text-sm font-medium text-primary text-center">Our team is ready to welcome you at our offices.</p>
             </div>
         </section>
         <section id="business-hours" class="py-14 bg-white border-y border-gray-100">
@@ -260,6 +258,24 @@
         <section class="py-12 bg-white">
             <div class="max-w-5xl mx-auto px-4 text-center">
                 <p class="text-gray-700 text-xl leading-relaxed">We value long-term business relationships built on trust, quality, and consistent service.</p>
+            </div>
+        </section>
+        <!-- Section 3: Map Integration -->
+        <section id="map-section" class="py-14 bg-beige/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="rounded-3xl overflow-hidden border border-gray-100 shadow-xl bg-white">
+                    <div class="relative h-[320px] md:h-[420px]">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/dbcc35bcb2-0bc47cdd61389701bf66.png" alt="professional global map visual showing trade routes and office location" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+                        <div class="absolute top-5 left-5 bg-white/95 backdrop-blur-md rounded-xl border border-primary/10 px-4 py-3 shadow-md">
+                            <p class="text-xs uppercase tracking-widest text-gray-500 font-bold">Office Location</p>
+                            <p class="text-sm font-semibold text-primary">Palda, Idhyog Nagar, Indore (M.P.)</p>
+                        </div>
+                        <a href="https://maps.google.com/?q=329/2%20Nemawar%20Road%20Palda%20Idhyog%20Nagar%20Indore" target="_blank" class="absolute bottom-5 right-5 bg-primary text-white px-5 py-3 rounded-full text-sm font-bold hover:bg-opacity-90 transition-all shadow-lg">
+                            Open in Maps
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
