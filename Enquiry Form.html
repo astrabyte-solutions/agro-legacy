@@ -9,7 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry - Agro Export Legacy</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Surendra Pulses | Enquiry</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,11 +24,15 @@
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                        serif: ['Montserrat', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <style>
         ::-webkit-scrollbar { display: none; }
@@ -45,14 +50,13 @@
                 <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-accent">
                     <i class="fa-solid fa-seedling text-xl"></i>
                 </div>
-                <span class="text-2xl font-heading font-extrabold text-primary tracking-tight">AGRO<span class="text-secondary">LEGACY</span></span>
+                <img src="surendra_logo.png" alt="Surendra Pulses" class="h-10 w-auto">
             </div>
             
             <div class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider text-gray-600">
                 <a href="Home - Agro Legacy.html" class="hover:text-primary transition-colors">Home</a>
                 <a href="About Us.html" class="hover:text-primary transition-colors">About</a>
                 <a href="Product Showcase.html" class="hover:text-primary transition-colors">Products</a>
-                <a href="Product Details.html" class="hover:text-primary transition-colors">Product Details</a>
                 <a href="Contact Us.html" class="hover:text-primary transition-colors">Contact</a>
             </div>
 
@@ -69,14 +73,13 @@
     <div id="mobileMenuBackdrop" class="fixed inset-0 bg-black/40 z-40 hidden md:hidden"></div>
     <aside id="mobileMenu" class="fixed top-0 left-0 h-full w-72 max-w-[85vw] bg-white z-50 transform -translate-x-full transition-transform duration-300 md:hidden shadow-2xl">
         <div class="flex items-center justify-between px-5 h-20 border-b border-gray-100">
-            <span class="text-lg font-heading font-extrabold text-primary">AGRO<span class="text-secondary">LEGACY</span></span>
+            <img src="surendra_logo.png" alt="Surendra Pulses" class="h-9 w-auto">
             <button id="mobileMenuClose" class="text-2xl text-primary"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <nav class="px-5 py-6 flex flex-col gap-4 text-sm font-semibold uppercase tracking-wider text-gray-700">
             <a href="Home - Agro Legacy.html">Home</a>
             <a href="About Us.html">About</a>
             <a href="Product Showcase.html">Products</a>
-            <a href="Product Details.html">Product Details</a>
             <a href="Contact Us.html">Contact</a>
             <a href="Enquiry Form.html" class="mt-2 inline-flex justify-center bg-primary text-white px-4 py-3 rounded-full">Enquire Now</a>
         </nav>
@@ -122,9 +125,9 @@
                     <div class="pt-8 border-t border-gray-200">
                         <p class="font-bold text-primary mb-4">Regional Offices</p>
                         <div class="flex flex-col gap-3 text-gray-600">
-                            <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-secondary"></i> 128 Trade Tower, Mumbai, India</div>
-                            <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-secondary"></i> +91 22 4567 8900</div>
-                            <div class="flex items-center gap-3"><i class="fa-solid fa-envelope text-secondary"></i> export@agrolegacy.com</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-secondary"></i> 329/2 Nemawar Road, Palda, Idhyog Nagar, Indore (M.P.)</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-secondary"></i> +91 6261605175 (Call & WhatsApp)</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-envelope text-secondary"></i> export@surendrapulses.com</div>
                         </div>
                     </div>
                 </div>
@@ -203,9 +206,30 @@
             </div>
         </div>
     </section>
+    <section id="enquiry-steps" class="py-14 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h3 class="text-3xl font-heading font-bold text-primary">How It Works</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="p-6 bg-gray-50 border border-gray-100 rounded-2xl text-center">
+                    <p class="font-bold text-primary mb-2">Step 1</p>
+                    <p class="text-gray-700">Share your product and quantity requirement.</p>
+                </div>
+                <div class="p-6 bg-gray-50 border border-gray-100 rounded-2xl text-center">
+                    <p class="font-bold text-primary mb-2">Step 2</p>
+                    <p class="text-gray-700">Get pricing, availability, and packaging options.</p>
+                </div>
+                <div class="p-6 bg-gray-50 border border-gray-100 rounded-2xl text-center">
+                    <p class="font-bold text-primary mb-2">Step 3</p>
+                    <p class="text-gray-700">Confirm order and proceed with dispatch coordination.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- WhatsApp Floating Button -->
-    <a href="#" class="fixed bottom-8 right-8 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl z-50 hover:scale-110 transition-transform">
+    <a href="https://wa.me/916261605175" target="_blank" class="fixed bottom-8 right-8 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl z-50 hover:scale-110 transition-transform">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
@@ -218,7 +242,7 @@
                         <div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-accent">
                             <i class="fa-solid fa-seedling"></i>
                         </div>
-                        <span class="text-xl font-heading font-extrabold tracking-tight">AGRO<span class="text-accent">LEGACY</span></span>
+                        <img src="surendra_logo.png" alt="Surendra Pulses" class="h-10 w-auto">
                     </div>
                     <p class="text-gray-400 leading-relaxed mb-6">Trusted since 1965. We are dedicated to delivering the finest agricultural products from India to the world.</p>
                 </div>
@@ -228,7 +252,6 @@
                         <li><a href="Home - Agro Legacy.html" class="hover:text-accent transition-colors">Home</a></li>
                         <li><a href="About Us.html" class="hover:text-accent transition-colors">About Us</a></li>
                         <li><a href="Product Showcase.html" class="hover:text-accent transition-colors">Products</a></li>
-                        <li><a href="Product Details.html" class="hover:text-accent transition-colors">Product Details</a></li>
                         <li><a href="Contact Us.html" class="hover:text-accent transition-colors">Contact Us</a></li>
                         <li><a href="Enquiry Form.html" class="hover:text-accent transition-colors">Enquiry Form</a></li>
                     </ul>
@@ -238,15 +261,15 @@
                     <ul class="space-y-4 text-gray-400">
                         <li class="flex gap-3">
                             <i class="fa-solid fa-location-dot text-accent mt-1"></i>
-                            <span>123 Agro Plaza, Export Zone,<br>Mumbai, MH 400001, India</span>
+                            <span>329/2 Nemawar Road, Palda,<br>Idhyog Nagar, Indore (M.P.)</span>
                         </li>
                         <li class="flex gap-3">
                             <i class="fa-solid fa-phone text-accent mt-1"></i>
-                            <span>+91 22 1234 5678</span>
+                            <span>+91 6261605175</span>
                         </li>
                         <li class="flex gap-3">
                             <i class="fa-solid fa-envelope text-accent mt-1"></i>
-                            <span>export@agrolegacy.com</span>
+                            <span>export@surendrapulses.com</span>
                         </li>
                     </ul>
                 </div>
@@ -260,7 +283,7 @@
                 </div>
             </div>
             <div class="pt-8 border-t border-white/5 text-center text-gray-500 text-sm">
-                <p>&copy; 2024 AgroLegacy Commodities. All Rights Reserved. Designed with Excellence.</p>
+                <p>&copy; 2024 Surendra Pulses. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -308,3 +331,4 @@
 
 </body>
 </html>
+

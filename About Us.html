@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Legacy Agro Business</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Surendra Pulses | About Us</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,13 +24,15 @@
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                        serif: ['Montserrat', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" crossorigin="anonymous"></script>
     <style>
         ::-webkit-scrollbar { display: none; }
@@ -47,14 +50,13 @@
                 <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-accent">
                     <i class="fa-solid fa-seedling text-xl"></i>
                 </div>
-                <span class="text-2xl font-heading font-extrabold text-primary tracking-tight">AGRO<span class="text-secondary">LEGACY</span></span>
+                <img src="surendra_logo.png" alt="Surendra Pulses" class="h-10 w-auto">
             </div>
             
             <div class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider text-gray-600">
                 <a href="Home - Agro Legacy.html" class="hover:text-primary transition-colors">Home</a>
                 <a href="About Us.html" class="hover:text-primary transition-colors border-b-2 border-primary">About</a>
                 <a href="Product Showcase.html" class="hover:text-primary transition-colors">Products</a>
-                <a href="Product Details.html" class="hover:text-primary transition-colors">Product Details</a>
                 <a href="Contact Us.html" class="hover:text-primary transition-colors">Contact</a>
             </div>
 
@@ -71,14 +73,13 @@
     <div id="mobileMenuBackdrop" class="fixed inset-0 bg-black/40 z-40 hidden md:hidden"></div>
     <aside id="mobileMenu" class="fixed top-0 left-0 h-full w-72 max-w-[85vw] bg-white z-50 transform -translate-x-full transition-transform duration-300 md:hidden shadow-2xl">
         <div class="flex items-center justify-between px-5 h-20 border-b border-gray-100">
-            <span class="text-lg font-heading font-extrabold text-primary">AGRO<span class="text-secondary">LEGACY</span></span>
+            <img src="surendra_logo.png" alt="Surendra Pulses" class="h-9 w-auto">
             <button id="mobileMenuClose" class="text-2xl text-primary"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <nav class="px-5 py-6 flex flex-col gap-4 text-sm font-semibold uppercase tracking-wider text-gray-700">
             <a href="Home - Agro Legacy.html">Home</a>
             <a href="About Us.html">About</a>
             <a href="Product Showcase.html">Products</a>
-            <a href="Product Details.html">Product Details</a>
             <a href="Contact Us.html">Contact</a>
             <a href="Enquiry Form.html" class="mt-2 inline-flex justify-center bg-primary text-white px-4 py-3 rounded-full">Enquire Now</a>
         </nav>
@@ -102,8 +103,8 @@
         <section id="story-timeline" class="py-24 bg-beige/30 overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">The Journey Through Generations</h2>
-                    <p class="text-gray-600">From a small trading house to a global agro-commodity leader.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Journey</h2>
+                    <p class="text-gray-600">From Hiralal Mannalal & Sons to Surendra Pulses across four generations.</p>
                 </div>
                 
                 <div class="relative">
@@ -146,7 +147,7 @@
                             <div class="md:w-5/12 text-center md:text-right order-2 md:order-1">
                                 <h3 class="text-3xl font-bold text-secondary mb-2">1988</h3>
                                 <h4 class="text-xl font-semibold text-primary mb-3">Product Diversification</h4>
-                                <p class="text-gray-600 leading-relaxed">Surendra Goyal expanded the business footprint across India, introducing a wider range of pulses and agro-commodities.</p>
+                                <p class="text-gray-600 leading-relaxed">Mr. Surendra Goyal joined the business and played a key role in expanding operations, doubling turnover and diversifying product range.</p>
                             </div>
                             <div class="z-10 w-12 h-12 rounded-full bg-accent border-4 border-white shadow-xl flex items-center justify-center text-white order-1 md:order-2 mb-6 md:mb-0 group-hover:scale-125 transition-transform">
                                 <i class="fa-solid fa-earth-asia"></i>
@@ -175,7 +176,7 @@
             </div>
         </section>
 
-        <!-- Section 3: Vision & Mission -->
+        <!-- Section 3: Legacy, Mission and Vision -->
         <section id="vision-mission" class="py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-3 gap-8">
@@ -183,22 +184,22 @@
                         <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
                             <i class="fa-solid fa-award text-3xl"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-primary mb-4">Quality First</h3>
-                        <p class="text-gray-600 leading-relaxed">We maintain uncompromising standards in every grain we process, ensuring only the finest reaches our global partners.</p>
+                        <h3 class="text-2xl font-bold text-primary mb-4">Our Legacy</h3>
+                        <p class="text-gray-600 leading-relaxed">With over four generations of experience, Surendra Pulses stands as a symbol of reliability and long-term commitment in the agro industry.</p>
                     </div>
                     <div class="bg-primary p-10 rounded-3xl shadow-xl shadow-primary/30 transform lg:-translate-y-8">
                         <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-accent mb-6">
                             <i class="fa-solid fa-handshake text-3xl"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-4">Built on Trust</h3>
-                        <p class="text-gray-100 leading-relaxed">For over six decades, our reputation has been our greatest asset. Transparent dealings and long-term relationships are our core.</p>
+                        <h3 class="text-2xl font-bold text-white mb-4">Our Mission</h3>
+                        <p class="text-gray-100 leading-relaxed">To deliver consistent quality agro products while maintaining trust and long-term relationships with our customers.</p>
                     </div>
                     <div class="bg-beige/20 p-10 rounded-3xl border border-accent/20 hover:shadow-2xl transition-all group">
                         <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
                             <i class="fa-solid fa-globe text-3xl"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-primary mb-4">Global Reach</h3>
-                        <p class="text-gray-600 leading-relaxed">Expanding our footprint to every corner of the world, bringing the bounty of Indian agriculture to international markets.</p>
+                        <h3 class="text-2xl font-bold text-primary mb-4">Our Vision</h3>
+                        <p class="text-gray-600 leading-relaxed">To continue growing as a trusted name in the agro commodity sector while expanding our reach in domestic and international markets.</p>
                     </div>
                 </div>
             </div>
@@ -251,16 +252,25 @@
                     </div>
                     <div class="flex flex-col items-center bg-gray-50 border border-gray-200 rounded-2xl p-6">
                         <img class="h-24 w-full object-contain mb-4" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8e5dae4913-d55048e4604945db8c50.png" alt="ISO 22000 certification logo" />
-                        <span class="text-xs font-semibold text-gray-700 uppercase tracking-widest text-center">ISO 22000</span>
+                        <span class="text-xs font-semibold text-gray-700 uppercase tracking-widest text-center">APEDA</span>
                     </div>
                     <div class="flex flex-col items-center bg-gray-50 border border-gray-200 rounded-2xl p-6">
                         <img class="h-24 w-full object-contain mb-4" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/3257cff6de-585e5dc3b54705c96da0.png" alt="APEDA agricultural export authority logo india" />
-                        <span class="text-xs font-semibold text-gray-700 uppercase tracking-widest text-center">APEDA Member</span>
+                        <span class="text-xs font-semibold text-gray-700 uppercase tracking-widest text-center">DGFT Registration</span>
                     </div>
                     <div class="flex flex-col items-center bg-gray-50 border border-gray-200 rounded-2xl p-6">
                         <img class="h-24 w-full object-contain mb-4" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f65e607fd0-cac87b0cf254ed7fac19.png" alt="HACCP food safety certification logo" />
-                        <span class="text-xs font-semibold text-gray-700 uppercase tracking-widest text-center">HACCP Compliant</span>
+                        <span class="text-xs font-semibold text-gray-700 uppercase tracking-widest text-center">ISO 9001:2015</span>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section id="leadership-note" class="py-16 bg-beige/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-3xl border border-gray-100 p-8 md:p-12 shadow-sm">
+                    <h3 class="text-3xl font-heading font-bold text-primary mb-4">Leadership Note</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">At Surendra Pulses, every generation has added strength to our values, systems, and relationships. Our focus remains the same: consistent quality, transparent dealings, and dependable supply.</p>
+                    <p class="text-gray-700 leading-relaxed">We continue to build long-term partnerships by combining legacy experience with modern process discipline.</p>
                 </div>
             </div>
         </section>
@@ -275,7 +285,7 @@
                         <div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-accent">
                             <i class="fa-solid fa-seedling"></i>
                         </div>
-                        <span class="text-xl font-heading font-extrabold tracking-tight">AGRO<span class="text-accent">LEGACY</span></span>
+                        <img src="surendra_logo.png" alt="Surendra Pulses" class="h-10 w-auto">
                     </div>
                     <p class="text-gray-400 leading-relaxed mb-6">
                         Trusted since 1965. We are dedicated to delivering the finest agricultural products from India to the world.
@@ -293,7 +303,6 @@
                         <li><a href="Home - Agro Legacy.html" class="hover:text-accent transition-colors">Home</a></li>
                         <li><a href="About Us.html" class="hover:text-accent transition-colors">About Us</a></li>
                         <li><a href="Product Showcase.html" class="hover:text-accent transition-colors">Products</a></li>
-                        <li><a href="Product Details.html" class="hover:text-accent transition-colors">Product Details</a></li>
                         <li><a href="Contact Us.html" class="hover:text-accent transition-colors">Contact Us</a></li>
                         <li><a href="Enquiry Form.html" class="hover:text-accent transition-colors">Enquiry Form</a></li>
                     </ul>
@@ -304,15 +313,15 @@
                     <ul class="space-y-4 text-gray-400">
                         <li class="flex gap-3">
                             <i class="fa-solid fa-location-dot text-accent mt-1"></i>
-                            <span>123 Agro Plaza, Export Zone,<br>Mumbai, MH 400001, India</span>
+                            <span>329/2 Nemawar Road, Palda,<br>Idhyog Nagar, Indore (M.P.)</span>
                         </li>
                         <li class="flex gap-3">
                             <i class="fa-solid fa-phone text-accent mt-1"></i>
-                            <span>+91 22 1234 5678</span>
+                            <span>+91 6261605175</span>
                         </li>
                         <li class="flex gap-3">
                             <i class="fa-solid fa-envelope text-accent mt-1"></i>
-                            <span>export@agrolegacy.com</span>
+                            <span>export@surendrapulses.com</span>
                         </li>
                     </ul>
                 </div>
@@ -328,13 +337,13 @@
             </div>
             
             <div class="pt-8 border-t border-white/5 text-center text-gray-500 text-sm">
-                <p>&copy; 2024 AgroLegacy Commodities. All Rights Reserved. Designed with Excellence.</p>
+                <p>&copy; 2024 Surendra Pulses. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="#" class="fixed bottom-8 right-8 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform z-50">
+    <a href="https://wa.me/916261605175" target="_blank" class="fixed bottom-8 right-8 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform z-50">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
@@ -369,3 +378,4 @@
     </script>
 </body>
 </html>
+
