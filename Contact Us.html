@@ -43,20 +43,22 @@
     <!-- Header -->
     <header id="header" class="fixed top-0 w-full z-50 glass-effect border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex items-center h-20">
                 <div class="flex items-center gap-2">
                     <img src="surendra_logo.png" alt="Surendra Pulses" class="h-12 w-auto">
                 </div>
-                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider text-gray-600">
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider text-gray-600 ml-auto">
                     <a href="Home - Agro Legacy.html" class="hover:text-primary transition-colors">Home</a>
                     <a href="About Us.html" class="hover:text-primary transition-colors">About</a>
                     <a href="Product Showcase.html" class="hover:text-primary transition-colors">Products</a>
                     <a href="Contact Us.html" class="hover:text-primary transition-colors border-b-2 border-primary">Contact</a>
-                    <a href="Enquiry Form.html" class="bg-primary text-white px-6 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20">Enquire Now</a>
                 </nav>
-                <button id="mobileMenuBtn" class="md:hidden text-primary text-2xl">
-                    <i class="fa-solid fa-bars-staggered"></i>
-                </button>
+                <div class="flex items-center gap-4 md:ml-6 ml-auto">
+                    <a href="Enquiry Form.html" class="hidden lg:block bg-primary text-white px-6 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20">Enquire Now</a>
+                    <button id="mobileMenuBtn" class="md:hidden text-primary text-2xl">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -93,7 +95,7 @@
         </section>
 
         <!-- Section 2: Contact Info & Enquiry Form -->
-        <section id="contact-content" class="py-16 md:py-24 bg-white">
+        <section id="contact-content" class="py-16 md:py-24 bg-beige/20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-12 gap-12 items-start">
                     
@@ -105,7 +107,7 @@
                         </div>
 
                         <div id="contact-cards" class="space-y-6">
-                            <div class="flex items-start gap-4 p-6 bg-beige/30 rounded-xl border border-beige">
+                            <div class="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
                                 <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shrink-0">
                                     <i class="fa-solid fa-location-dot text-accent text-xl"></i>
                                 </div>
@@ -115,7 +117,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex items-start gap-4 p-6 bg-beige/30 rounded-xl border border-beige">
+                            <div class="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
                                 <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shrink-0">
                                     <i class="fa-solid fa-phone-volume text-accent text-xl"></i>
                                 </div>
@@ -125,7 +127,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex items-start gap-4 p-6 bg-beige/30 rounded-xl border border-beige">
+                            <div class="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
                                 <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shrink-0">
                                     <i class="fa-solid fa-envelope-open-text text-accent text-xl"></i>
                                 </div>
@@ -155,7 +157,7 @@
 
                     <!-- Enquiry Form Column -->
                     <div class="lg:col-span-8">
-                        <div id="form-container" class="bg-white p-8 md:p-10 rounded-2xl shadow-2xl border border-gray-100 relative overflow-hidden">
+                        <div id="form-container" class="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100 relative overflow-hidden">
                             <div class="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full -mr-16 -mt-16"></div>
                             
                             <form id="enquiry-form" class="space-y-6 relative z-10">
@@ -240,16 +242,24 @@
         </section>
         <section id="business-hours" class="py-14 bg-white border-y border-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center">
-                    <h3 class="text-3xl font-heading font-bold text-primary mb-3">Business Hours</h3>
-                    <p class="text-gray-700 mb-2">Monday to Saturday: 10:00 AM - 7:00 PM</p>
-                    <p class="text-gray-700">Sunday: Closed</p>
+                <div class="max-w-4xl mx-auto bg-beige/40 border border-gray-100 rounded-3xl p-8 md:p-10 text-center shadow-sm">
+                    <h3 class="text-3xl font-heading font-bold text-primary mb-6">Business Hours</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-xl border border-gray-100 p-5">
+                            <p class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">Monday to Saturday</p>
+                            <p class="text-lg font-semibold text-secondary">10:00 AM - 7:00 PM</p>
+                        </div>
+                        <div class="bg-white rounded-xl border border-gray-100 p-5">
+                            <p class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">Sunday</p>
+                            <p class="text-lg font-semibold text-secondary">Closed</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="py-10 bg-white">
-            <div class="max-w-7xl mx-auto px-4 text-center">
-                <p class="text-gray-700 text-lg">We look forward to building long-term business relationships based on trust and quality.</p>
+        <section class="py-12 bg-white">
+            <div class="max-w-5xl mx-auto px-4 text-center">
+                <p class="text-gray-700 text-xl leading-relaxed">We value long-term business relationships built on trust, quality, and consistent service.</p>
             </div>
         </section>
     </main>
