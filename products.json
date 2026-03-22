@@ -1,0 +1,155 @@
+{
+  "filterCategories": [
+    { "id": "all", "label": "All Products" },
+    { "id": "toor", "label": "Toor Dal" },
+    { "id": "moong", "label": "Moong" },
+    { "id": "chana", "label": "Chana (Bengal Gram)" },
+    { "id": "others", "label": "Others" }
+  ],
+  "products": [
+    {
+      "slug": "toor-dall-bold-fatka",
+      "name": "Toor Dal Bold Fatka",
+      "category": "toor",
+      "categoryLabel": "Toor Dal",
+      "imageFile": "Toor dall Bold fatka.webp",
+      "shortDescription": "Bold, uniform pigeon pea (arhar) with premium appearance and cooking quality.",
+      "description": "Toor Dal Bold Fatka is processed pigeon pea with bold grain size and consistent colour—preferred for retail packing and household segments that demand visible quality."
+    },
+    {
+      "slug": "toor-dall-medium-fatka",
+      "name": "Toor Dal Medium Fatka",
+      "category": "toor",
+      "categoryLabel": "Toor Dal",
+      "imageFile": "Toor dall medium fatka.webp",
+      "shortDescription": "Balanced medium-grade fatka suited to regular trade and value-focused buyers.",
+      "description": "Medium fatka offers dependable quality for everyday consumption with stable sizing and good yield on cooking—ideal for mandi and distributor supply."
+    },
+    {
+      "slug": "toor-dall-bold-roll",
+      "name": "Toor Dal Bold Roll",
+      "category": "toor",
+      "categoryLabel": "Toor Dal",
+      "imageFile": "Toor dall Bold Roll.webp",
+      "shortDescription": "Bold roll cut with strong demand among bulk buyers and packers.",
+      "description": "Bold Roll variant is processed for consistency and bulk movement, supporting large-volume orders with predictable grading."
+    },
+    {
+      "slug": "toor-dall-medium-roll",
+      "name": "Toor Dal Medium Roll",
+      "category": "toor",
+      "categoryLabel": "Toor Dal",
+      "imageFile": "Toor dall Medium Roll.webp",
+      "shortDescription": "Medium roll for broad distribution and price-sensitive markets.",
+      "description": "Medium Roll matches steady market demand with reliable processing and clean presentation for wholesale channels."
+    },
+    {
+      "slug": "toor-dall-2-roll",
+      "name": "Toor Dal 2nd Roll",
+      "category": "toor",
+      "categoryLabel": "Toor Dal",
+      "imageFile": "Toor dall 2.Roll.webp",
+      "shortDescription": "Economical second-roll grade for buyers seeking value options.",
+      "description": "2nd Roll is positioned for economical use cases while still meeting supervised processing standards."
+    },
+    {
+      "slug": "toor-dall-rejection",
+      "name": "Toor Dal Rejection",
+      "category": "toor",
+      "categoryLabel": "Toor Dal",
+      "imageFile": "Toor dall rejection.webp",
+      "shortDescription": "Lower grade / rejection lot supplied as per specific buyer requirements.",
+      "description": "Rejection grade material is offered where buyers explicitly need lower specification stock for industrial or non-retail applications—availability subject to season."
+    },
+    {
+      "slug": "moong-polish-bold",
+      "name": "Moong Polish Bold",
+      "category": "moong",
+      "categoryLabel": "Moong",
+      "imageFile": "moong polish Bold.jpg",
+      "shortDescription": "Bold green gram with polished finish and bright appearance.",
+      "description": "Moong Polish Bold is cleaned and polished for premium retail and export-facing packs where visual appeal matters."
+    },
+    {
+      "slug": "moong-polish-medium",
+      "name": "Moong Polish Medium",
+      "category": "moong",
+      "categoryLabel": "Moong",
+      "imageFile": "Moong polish medium.webp",
+      "shortDescription": "Medium polish moong—balanced quality for everyday trade.",
+      "description": "Medium polish offers consistent finish and competitive pricing for high-volume moong movement."
+    },
+    {
+      "slug": "moong-dall-bold",
+      "name": "Moong Dal Bold",
+      "category": "moong",
+      "categoryLabel": "Moong",
+      "imageFile": "moong polish Bold.jpg",
+      "shortDescription": "Bold split moong (dal) for kitchens, packers, and food processors.",
+      "description": "Moong Dal Bold is graded for bold split size and consistent finish—suitable for dal mills and retail lines that specify bold dal."
+    },
+    {
+      "slug": "moong-dall-medium",
+      "name": "Moong Dal Medium",
+      "category": "moong",
+      "categoryLabel": "Moong",
+      "imageFile": "Moong polish medium.webp",
+      "shortDescription": "Medium split moong for steady wholesale and mandi supply.",
+      "description": "Moong Dal Medium is positioned for everyday movement with reliable grading and supervised processing."
+    },
+    {
+      "slug": "chana-bold-gram",
+      "name": "Chana Bold Gram",
+      "category": "chana",
+      "categoryLabel": "Chana",
+      "imageFile": "chana (bengal gram) bold gram.jpg",
+      "shortDescription": "Bold-size Bengal gram (kala chana) with strong body and uniform look.",
+      "description": "Bold gram is sorted for size and cleanliness—suitable for domestic and export buyers who specify bold grade."
+    },
+    {
+      "slug": "chana-medium-gram",
+      "name": "Chana Medium Gram",
+      "category": "chana",
+      "categoryLabel": "Chana",
+      "imageFile": "CHANA BENGAL GRAM).webp",
+      "shortDescription": "Medium-grade whole Bengal gram for volume buyers.",
+      "description": "Medium gram chana offers balanced specification for traders needing steady supply across seasons."
+    },
+    {
+      "slug": "chana-bold-gram-dal",
+      "name": "Chana Bold Gram Dal",
+      "category": "chana",
+      "categoryLabel": "Chana",
+      "imageFile": "Bold gram dall.jpg",
+      "shortDescription": "Bold chana dal (split) processed under supervision.",
+      "description": "Bold Gram Dal is prepared for dal trade and packing lines requiring bold split appearance."
+    },
+    {
+      "slug": "chana-medium-gram-dal",
+      "name": "Chana Medium Gram Dal",
+      "category": "chana",
+      "categoryLabel": "Chana",
+      "imageFile": "Bold gram dall.jpg",
+      "shortDescription": "Medium split chana dal for broad market and value segments.",
+      "description": "Medium Gram Dal is processed for traders needing medium split specification with consistent supply planning."
+    },
+    {
+      "slug": "white-chick-peas",
+      "name": "White Chick Peas",
+      "category": "others",
+      "categoryLabel": "Others",
+      "imageFile": "white chick peas.jpg",
+      "shortDescription": "Kabuli-type white chickpeas—cleaned and graded for export-oriented buyers.",
+      "description": "White chick peas are offered with attention to uniformity and cleanliness for retail, packing, and export channels."
+    },
+    {
+      "slug": "maize",
+      "name": "Maize",
+      "category": "others",
+      "categoryLabel": "Others",
+      "imageFile": "maize.jpg",
+      "shortDescription": "Yellow maize for food and feed applications with moisture checks.",
+      "description": "Maize is supplied with controlled quality parameters suitable for human consumption or feed use as per buyer discussion."
+    }
+  ]
+}

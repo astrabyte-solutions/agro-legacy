@@ -1,0 +1,21 @@
+<script>
+    function handleSubmit(event) {
+        event.preventDefault();
+        const formContent = document.getElementById('form-content');
+        const successMessage = document.getElementById('successMessage');
+        formContent.classList.add('opacity-20', 'pointer-events-none');
+        setTimeout(() => {
+            formContent.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+        }, 600);
+    }
+
+    function resetForm() {
+        const formContent = document.getElementById('form-content');
+        const successMessage = document.getElementById('successMessage');
+        const form = document.getElementById('enquiryForm');
+        form.reset();
+        successMessage.classList.add('hidden');
+        formContent.classList.remove('hidden', 'opacity-20', 'pointer-events-none');
+    }
+</script>

@@ -1,0 +1,52 @@
+<% const productTypes = locals.productTypes || []; %>
+<main id="main-content" class="pt-20">
+    <section class="relative h-[320px] md:h-[380px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a5a45f184e-ac3f67de5a3c01e25de4.png" alt="" />
+            <div class="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-heading font-extrabold text-white mb-4">Our Products</h1>
+            <div class="w-24 h-1.5 bg-accent mx-auto rounded-full mb-6"></div>
+            <p class="text-white/90 text-lg md:text-xl leading-relaxed">Choose a product type to see all available grades and variants.</p>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-light">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 gap-8">
+                <% productTypes.forEach(function(t) { %>
+                <a href="/products/<%= t.id %>" class="group flex flex-col bg-white rounded-2xl border border-gray-100 shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="relative h-56 overflow-hidden bg-gray-100">
+                        <% if (t.previewImage) { %>
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="<%= assetUrl(t.previewImage) %>" alt="<%= t.label %>" />
+                        <% } else { %>
+                        <div class="w-full h-full flex items-center justify-center bg-primary/10 text-primary text-6xl"><i class="fa-solid fa-seedling"></i></div>
+                        <% } %>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="inline-block text-xs font-bold uppercase tracking-wider text-accent mb-1"><%= t.count %> variants</span>
+                            <h2 class="text-2xl md:text-3xl font-heading font-bold text-white"><%= t.label %></h2>
+                        </div>
+                    </div>
+                    <div class="p-6 flex items-center justify-between gap-4">
+                        <p class="text-gray-600 text-sm">View all products in this category</p>
+                        <span class="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white group-hover:bg-accent group-hover:text-primary transition-colors">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-14 bg-white border-t border-gray-100">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Need a specific grade or bulk quote? <a href="/enquiry" class="text-primary font-semibold hover:underline">Send an enquiry</a> or
+                <a href="/contact" class="text-primary font-semibold hover:underline">contact us</a>.
+            </p>
+        </div>
+    </section>
+</main>

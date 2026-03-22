@@ -1,0 +1,19 @@
+{
+  "name": "surendra-pulses-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Surendra Pulses marketing site (Express + EJS)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-ejs-layouts": "^2.5.1"
+  }
+}

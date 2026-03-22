@@ -1,0 +1,23 @@
+<% 
+  const groups = typeof enquiryProductGroups !== 'undefined' ? enquiryProductGroups : [];
+  const sid = typeof selectId !== 'undefined' ? selectId : 'productInterest';
+  const sname = typeof selectName !== 'undefined' ? selectName : 'product';
+  const req = typeof selectRequired !== 'undefined' ? selectRequired : true;
+  const baseClass = 'w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-primary focus:outline-none transition-all appearance-none pr-10';
+%>
+<div class="relative">
+    <select id="<%= sid %>" name="<%= sname %>" <%= req ? 'required' : '' %> class="<%= baseClass %> <%= typeof selectClassExtra !== 'undefined' ? selectClassExtra : '' %>">
+        <option value="">Select product</option>
+        <% groups.forEach(function (g) { %>
+        <optgroup label="<%= g.label %>">
+            <% g.items.forEach(function (p) { %>
+            <option value="<%= p.value %>"><%= p.label %></option>
+            <% }); %>
+        </optgroup>
+        <% }); %>
+        <option value="other">Other / not listed</option>
+    </select>
+    <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400" aria-hidden="true">
+        <i class="fa-solid fa-chevron-down text-sm"></i>
+    </div>
+</div>

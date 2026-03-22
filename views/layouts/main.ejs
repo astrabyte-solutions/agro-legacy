@@ -1,0 +1,12 @@
+<%- include('../partials/head') %>
+<body class="<%= typeof bodyClass !== 'undefined' ? bodyClass : 'bg-white text-gray-800 font-sans' %>">
+<%- include('../partials/header') %>
+<%- body %>
+<%- include('../partials/footer') %>
+<%- include('../partials/whatsapp') %>
+<%- include('../partials/scripts') %>
+<% if (typeof extraScriptsPartial !== 'undefined' && extraScriptsPartial) { %>
+<%- include('../' + extraScriptsPartial) %>
+<% } %>
+</body>
+</html>

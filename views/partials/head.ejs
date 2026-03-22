@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <title><%= title %></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B5E20',
+                        secondary: '#6D4C41',
+                        accent: '#C8A951',
+                        light: '#F5F5DC',
+                        beige: '#FDFBF7',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                        serif: ['Montserrat', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+    <style>
+        ::-webkit-scrollbar { display: none; }
+        .glass-effect { background: rgba(247, 244, 236, 0.95); backdrop-filter: blur(10px); }
+        .hover-lift { transition: transform 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); }
+        .timeline-line { background: linear-gradient(to bottom, #C8A951 0%, #1B5E20 100%); }
+        .glass-card { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        .product-card:hover .product-overlay { opacity: 1; }
+        .filter-btn.active { background-color: #1B5E20; color: white; border-color: #1B5E20; }
+        .sticky-nav { backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.9); }
+        .form-input:focus { border-color: #C8A951; outline: none; }
+        .product-gradient { background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%); }
+        .success-animate { animation: slideUp 0.5s ease-out forwards; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+    <% if (typeof extraHead !== 'undefined' && extraHead) { %><%- extraHead %><% } %>
+</head>

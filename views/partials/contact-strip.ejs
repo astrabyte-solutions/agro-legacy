@@ -1,0 +1,58 @@
+<% 
+  const heading = typeof contactHeading !== 'undefined' ? contactHeading : 'Connect with us';
+  const sub = typeof contactSub !== 'undefined' ? contactSub : 'For quotations, bulk orders, or export discussions—our team responds promptly.';
+  const mapNote = typeof showMapNote !== 'undefined' ? showMapNote : false;
+%>
+<section class="py-16 md:py-20 <%= typeof contactBgClass !== 'undefined' ? contactBgClass : 'bg-white' %>" id="<%= typeof contactSectionId !== 'undefined' ? contactSectionId : 'contact-strip' %>">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-3"><%= heading %></h2>
+            <p class="text-gray-600 text-lg"><%= sub %></p>
+            <div class="w-24 h-1 bg-accent mx-auto mt-6"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+            <div class="rounded-2xl border border-gray-100 bg-light p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                    <i class="fa-solid fa-location-dot text-xl"></i>
+                </div>
+                <h3 class="font-bold text-secondary mb-2">Address</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">329/2 Nemawar Road, Palda, Idhyog Nagar, Indore (M.P.)</p>
+            </div>
+            <div class="rounded-2xl border border-gray-100 bg-light p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                    <i class="fa-solid fa-phone text-xl"></i>
+                </div>
+                <h3 class="font-bold text-secondary mb-2">Phone &amp; WhatsApp</h3>
+                <a href="tel:+916261605175" class="text-primary font-semibold hover:underline block">+91 6261605175</a>
+                <a href="https://wa.me/916261605175" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-green-700 font-semibold mt-2 hover:underline">
+                    <i class="fa-brands fa-whatsapp"></i> Message on WhatsApp
+                </a>
+            </div>
+            <div class="rounded-2xl border border-gray-100 bg-light p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                    <i class="fa-solid fa-envelope text-xl"></i>
+                </div>
+                <h3 class="font-bold text-secondary mb-2">Email</h3>
+                <a href="mailto:surendrapulses@gmail.com" class="text-primary text-sm font-medium hover:underline break-all">surendrapulses@gmail.com</a>
+            </div>
+            <div class="rounded-2xl border border-gray-100 bg-light p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                    <i class="fa-solid fa-clock text-xl"></i>
+                </div>
+                <h3 class="font-bold text-secondary mb-2">Response time</h3>
+                <p class="text-gray-600 text-sm">We aim to reply to trade enquiries within one business day.</p>
+            </div>
+        </div>
+        <% if (mapNote) { %>
+        <p class="text-center text-gray-500 text-sm max-w-2xl mx-auto mb-8">Visitors are welcome by prior appointment so we can assign the right team member for your discussion.</p>
+        <% } %>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="/contact" class="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-secondary transition-colors shadow-lg min-w-[200px]">
+                <i class="fa-solid fa-address-card"></i> Contact page
+            </a>
+            <a href="/enquiry" class="inline-flex items-center justify-center gap-2 bg-accent text-primary px-8 py-4 rounded-xl font-bold hover:brightness-95 transition-all shadow-lg min-w-[200px]">
+                <i class="fa-solid fa-file-signature"></i> Enquiry form
+            </a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,39 @@
+<header id="header" class="fixed top-0 w-full z-50 glass-effect border-b border-gray-100">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2">
+            <img src="/assets/surendra_logo.png" alt="Surendra Pulses" class="h-12 w-auto">
+        </a>
+
+        <div class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider text-gray-600">
+            <a href="/" class="hover:text-primary transition-colors <%= current === 'home' ? 'border-b-2 border-primary' : '' %>">Home</a>
+            <a href="/about" class="hover:text-primary transition-colors <%= current === 'about' ? 'border-b-2 border-primary' : '' %>">About</a>
+            <a href="/products" class="hover:text-primary transition-colors <%= current === 'products' ? 'border-b-2 border-primary' : '' %>">Products</a>
+            <a href="/contact" class="hover:text-primary transition-colors <%= current === 'contact' ? 'border-b-2 border-primary' : '' %>">Contact</a>
+            <a href="/certificates" class="hover:text-primary transition-colors <%= current === 'certificates' ? 'border-b-2 border-primary' : '' %>">Certificates</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <a href="/enquiry" class="hidden lg:block bg-primary text-white px-6 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20 <%= current === 'enquiry' ? 'border-b-2 border-primary' : '' %>">
+                Enquire Now
+            </a>
+            <button type="button" id="mobileMenuBtn" class="md:hidden text-primary text-2xl" aria-label="Open menu">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+<div id="mobileMenuBackdrop" class="fixed inset-0 bg-black/40 z-40 hidden md:hidden"></div>
+<aside id="mobileMenu" class="fixed top-0 left-0 h-full w-72 max-w-[85vw] bg-white z-50 transform -translate-x-full transition-transform duration-300 md:hidden shadow-2xl">
+    <div class="flex items-center justify-between px-5 h-20 border-b border-gray-100">
+        <a href="/"><img src="/assets/surendra_logo.png" alt="Surendra Pulses" class="h-10 w-auto"></a>
+        <button type="button" id="mobileMenuClose" class="text-2xl text-primary" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav class="px-5 py-6 flex flex-col gap-4 text-sm font-semibold uppercase tracking-wider text-gray-700">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/products">Products</a>
+        <a href="/contact">Contact</a>
+        <a href="/certificates">Certificates</a>
+        <a href="/enquiry" class="mt-2 inline-flex justify-center bg-primary text-white px-4 py-3 rounded-full">Enquire Now</a>
+    </nav>
+</aside>

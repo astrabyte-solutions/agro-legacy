@@ -1,0 +1,12 @@
+<script>
+    window.addEventListener('scroll', () => {
+        const items = document.querySelectorAll('#story-timeline .group');
+        items.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.8) {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            }
+        });
+    });
+</script>

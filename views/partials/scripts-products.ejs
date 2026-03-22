@@ -1,0 +1,16 @@
+<script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const filter = this.dataset.filter;
+            filterButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            productCards.forEach(card => {
+                const category = card.dataset.category;
+                const visible = filter === 'all' || filter === category;
+                card.style.display = visible ? '' : 'none';
+            });
+        });
+    });
+</script>

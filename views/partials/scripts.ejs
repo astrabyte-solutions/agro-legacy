@@ -1,0 +1,17 @@
+<script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
+    const openMobileMenu = () => {
+        mobileMenu.classList.remove('-translate-x-full');
+        mobileMenuBackdrop.classList.remove('hidden');
+    };
+    const closeMobileMenu = () => {
+        mobileMenu.classList.add('-translate-x-full');
+        mobileMenuBackdrop.classList.add('hidden');
+    };
+    mobileMenuBtn?.addEventListener('click', openMobileMenu);
+    mobileMenuClose?.addEventListener('click', closeMobileMenu);
+    mobileMenuBackdrop?.addEventListener('click', closeMobileMenu);
+</script>

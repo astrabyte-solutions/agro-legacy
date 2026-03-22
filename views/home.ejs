@@ -1,0 +1,290 @@
+<% const productTypes = locals.productTypes || []; %>
+<main>
+        <!-- Section 1: Hero slider (horizontal track — % translateX, no vw mismatch) -->
+        <section id="hero" class="relative h-[min(700px,90vh)] md:h-[700px] flex items-center overflow-hidden pt-20">
+            <div class="absolute inset-0 z-0 overflow-hidden" aria-hidden="true" id="heroSlidesRoot">
+                <div id="heroTrack" class="flex h-full w-[300%] transition-transform duration-700 ease-out will-change-transform" style="transform: translateX(0%)">
+                    <div class="hero-slide relative h-full shrink-0 basis-1/3 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="/assets/hero/hero1.png" alt="" />
+                        <div class="absolute inset-0 bg-black/45"></div>
+                    </div>
+                    <div class="hero-slide relative h-full shrink-0 basis-1/3 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="/assets/hero/hero2.png" alt="" />
+                        <div class="absolute inset-0 bg-black/45"></div>
+                    </div>
+                    <div class="hero-slide relative h-full shrink-0 basis-1/3 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="/assets/hero/hero3.png" alt="" />
+                        <div class="absolute inset-0 bg-black/45"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" id="heroPrev" class="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-[60] w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/20 hover:bg-white/35 backdrop-blur-md border border-white/40 text-white flex items-center justify-center shadow-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent cursor-pointer" aria-label="Previous slide">
+                <i class="fa-solid fa-chevron-left text-lg md:text-xl"></i>
+            </button>
+            <button type="button" id="heroNext" class="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-[60] w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/20 hover:bg-white/35 backdrop-blur-md border border-white/40 text-white flex items-center justify-center shadow-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent cursor-pointer" aria-label="Next slide">
+                <i class="fa-solid fa-chevron-right text-lg md:text-xl"></i>
+            </button>
+
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-[60] flex gap-2 pointer-events-auto" id="heroDots" role="tablist" aria-label="Hero slides">
+                <button type="button" data-slide="0" class="hero-dot w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-white border border-white/50 ring-2 ring-transparent transition-all" aria-label="Slide 1" aria-current="true"></button>
+                <button type="button" data-slide="1" class="hero-dot w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-white/40 border border-white/30 transition-all" aria-label="Slide 2"></button>
+                <button type="button" data-slide="2" class="hero-dot w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-white/40 border border-white/30 transition-all" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pointer-events-none isolate">
+                <div class="max-w-3xl pointer-events-auto relative z-10">
+                    <div class="inline-block px-4 py-1.5 bg-accent/90 text-white rounded-full text-sm font-bold mb-6 tracking-widest uppercase">
+                        Established 1965
+                    </div>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold text-white leading-tight mb-6 drop-shadow-sm">
+                        Trusted Agro Commodity Experts Since 1965
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-100 mb-10 leading-relaxed max-w-2xl">
+                        Premium pulses and grains, delivered with trust, consistency, and four generations of experience.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="/products" class="bg-accent text-primary px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2">
+                            Explore Products <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="/enquiry" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all">
+                            Enquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Intro & Legacy -->
+        <section id="legacy" class="py-24 bg-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-accent/20 rounded-full blur-3xl"></div>
+                        <img class="rounded-2xl shadow-2xl relative z-10" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a30bfe4ebc-6b5af2f80b2f63cb463b.png" alt="historical grainy photo of traditional Indian grain market mixed with modern processing facility interior" />
+                        <div class="absolute -bottom-6 -right-6 bg-primary p-8 rounded-xl shadow-xl z-20 text-center">
+                            <span class="block text-4xl font-bold text-accent">60+</span>
+                            <span class="text-white text-sm font-medium uppercase tracking-widest">Years of Legacy</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-primary font-heading text-4xl font-bold mb-6">Rooted in 1965</h2>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-8">
+                            The journey began with <span class="font-semibold text-secondary">Mr. Hiralal ji Goyal</span>, who started the firm in <span class="font-semibold">1965</span> under the name <span class="italic">Hiralal Mannalal and Sons</span>—focused on ethical trade and dependable sourcing in agro commodities.
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-8">
+                            Today, <span class="font-semibold text-secondary">Surendra Pulses</span> carries that legacy forward with supervised processing, a wide product line, and the same commitment to trust—serving buyers across India and overseas.
+                        </p>
+                        <div class="p-5 rounded-xl bg-primary/5 border border-primary/10 mb-8">
+                            <h3 class="text-lg font-bold text-primary mb-2">Our Objective</h3>
+                            <p class="text-gray-700">Deliver consistent quality pulses and grains while building long-term customer relationships based on trust and reliability.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check-circle text-accent text-xl mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-secondary">Export Quality</h4>
+                                    <p class="text-sm text-gray-500">Premium grade selection</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check-circle text-accent text-xl mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-secondary">Global Reach</h4>
+                                    <p class="text-sm text-gray-500">Shipping to 40+ countries</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2b: Heritage milestones (summary only — full story on About) -->
+        <section id="heritage-milestones" class="py-20 bg-white border-y border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <span class="text-accent font-bold tracking-widest uppercase text-sm">Our timeline</span>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mt-2 mb-3">Four generations, one purpose</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Key moments from our family’s history in agro commodities—read the full journey on <a href="/about" class="text-primary font-semibold hover:underline">About Us</a>.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <article class="rounded-2xl bg-light border border-primary/10 p-6 hover:border-accent/40 transition-colors">
+                        <p class="text-accent font-black text-3xl mb-1">1965</p>
+                        <h3 class="font-bold text-secondary mb-2">Firm founded</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Mr. Hiralal ji Goyal establishes <span class="italic">Hiralal Mannalal and Sons</span>.</p>
+                    </article>
+                    <article class="rounded-2xl bg-light border border-primary/10 p-6 hover:border-accent/40 transition-colors">
+                        <p class="text-accent font-black text-3xl mb-1">1973</p>
+                        <h3 class="font-bold text-secondary mb-2">Factory era</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Mannalal ji Goyal sets up the processing unit under the <span class="font-medium text-secondary">Surendra Pulses</span> name.</p>
+                    </article>
+                    <article class="rounded-2xl bg-light border border-primary/10 p-6 hover:border-accent/40 transition-colors">
+                        <p class="text-accent font-black text-3xl mb-1">1988</p>
+                        <h3 class="font-bold text-secondary mb-2">Growth &amp; range</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Surendra Goyal ji joins—scaling turnover and broadening the product line.</p>
+                    </article>
+                    <article class="rounded-2xl bg-light border border-primary/10 p-6 hover:border-accent/40 transition-colors">
+                        <p class="text-accent font-black text-3xl mb-1">2015</p>
+                        <h3 class="font-bold text-secondary mb-2">Fourth generation</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Harsh Goyal joins to carry the legacy forward in agro commodity trade.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Product types (from catalog) -->
+        <section id="products" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+                <h2 class="text-4xl font-heading font-bold text-primary mb-4">Our Product Range</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Pick a category to see all grades and variants we offer.</p>
+                <div class="w-24 h-1 bg-accent mx-auto mt-6"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <% productTypes.forEach(function(t) { %>
+                <a href="/products/<%= t.id %>" class="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all hover-lift block text-left">
+                    <div class="h-64 overflow-hidden relative bg-gray-100">
+                        <% if (t.previewImage) { %>
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="<%= assetUrl(t.previewImage) %>" alt="<%= t.label %>" />
+                        <% } else { %>
+                        <div class="w-full h-full flex items-center justify-center bg-primary/10 text-primary text-5xl"><i class="fa-solid fa-seedling"></i></div>
+                        <% } %>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <span class="text-white font-bold">View variants <i class="fa-solid fa-chevron-right ml-2 text-xs"></i></span>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full"><%= t.count %> items</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2 group-hover:text-primary transition-colors"><%= t.label %></h3>
+                        <p class="text-gray-500 text-sm">Browse all products in this category.</p>
+                    </div>
+                </a>
+                <% }); %>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-12">
+                <a href="/products" class="inline-flex items-center gap-2 text-primary font-bold hover:underline">View all product types <i class="fa-solid fa-arrow-right text-sm"></i></a>
+            </div>
+        </section>
+
+        <!-- Section 4: Why Choose Us & Certs -->
+        <section id="why-us" class="py-24 bg-primary text-white overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+                <i class="fa-solid fa-earth-americas text-[400px]"></i>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-20">
+                    <div>
+                        <h2 class="text-4xl font-heading font-bold mb-12">Why Choose Surendra Pulses</h2>
+                        <div class="space-y-8">
+                            <div class="flex gap-6">
+                                <div class="w-14 h-14 shrink-0 bg-accent/20 rounded-xl flex items-center justify-center text-accent">
+                                    <i class="fa-solid fa-award text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-2">Over 60 years of industry experience</h4>
+                                    <p class="text-gray-300">A trusted legacy built on consistency and long-term business relationships.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div class="w-14 h-14 shrink-0 bg-accent/20 rounded-xl flex items-center justify-center text-accent">
+                                    <i class="fa-solid fa-certificate text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-2">Established processing facility since 1973</h4>
+                                    <p class="text-gray-300">Strong infrastructure with strict supervision and quality processes.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div class="w-14 h-14 shrink-0 bg-accent/20 rounded-xl flex items-center justify-center text-accent">
+                                    <i class="fa-solid fa-truck-fast text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-2">Certified and compliant standards</h4>
+                                    <p class="text-gray-300">FSSAI, APEDA, DGFT, and ISO 9001:2015 certified operations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/5 p-10 rounded-3xl backdrop-blur-sm border border-white/10">
+                        <h3 class="text-2xl font-bold mb-8 text-accent">Certifications</h3>
+                        <div class="grid grid-cols-2 gap-8">
+                            <div class="bg-white p-4 rounded-xl flex flex-col items-center justify-center text-center">
+                                <div class="h-16 flex items-center mb-2">
+                                    <span class="text-primary font-black text-2xl">FSSAI</span>
+                                </div>
+                                <span class="text-xs text-gray-400 font-bold uppercase">Food Safety</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl flex flex-col items-center justify-center text-center">
+                                <div class="h-16 flex items-center mb-2">
+                                    <span class="text-primary font-black text-2xl uppercase">Apeda</span>
+                                </div>
+                                <span class="text-xs text-gray-400 font-bold uppercase">Agro Export</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl flex flex-col items-center justify-center text-center">
+                                <div class="h-16 flex items-center mb-2">
+                                    <span class="text-primary font-black text-2xl">DGFT</span>
+                                </div>
+                                <span class="text-xs text-gray-400 font-bold uppercase">Foreign Trade</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl flex flex-col items-center justify-center text-center">
+                                <div class="h-16 flex items-center mb-2">
+                                    <span class="text-primary font-black text-lg">ISO 9001:2015</span>
+                                </div>
+                                <span class="text-xs text-gray-400 font-bold uppercase">Quality Mgmt</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Enquiry Banner -->
+        <section id="enquiry" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative rounded-[2rem] overflow-hidden bg-secondary p-12 lg:p-20">
+                    <div class="absolute inset-0 z-0 opacity-20">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b1aa0107d9-83fe58713b73395354f1.png" alt="pattern of various grains pulses and seeds texture" />
+                    </div>
+                    <div class="relative z-10 text-center max-w-3xl mx-auto">
+                        <h2 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">Looking for reliable agro commodity suppliers?</h2>
+                        <p class="text-white/80 text-lg mb-10">Send us your enquiry today and our team will assist you promptly.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="/enquiry" class="bg-accent text-primary px-10 py-5 rounded-xl font-bold text-xl hover:bg-white transition-colors shadow-2xl text-center">
+                                Enquire Now
+                            </a>
+                            <a href="/products" class="bg-transparent border-2 border-white/30 text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-white/10 transition-colors text-center">
+                                Explore Products
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="market-presence" class="py-16 bg-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-heading font-bold text-primary mb-3">Market Presence</h2>
+                    <p class="text-gray-600 max-w-3xl mx-auto">Serving domestic and international buyers with dependable quality, transparent communication, and timely support.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm">
+                        <h3 class="text-3xl font-bold text-primary mb-2">60+</h3>
+                        <p class="text-gray-600">Years of Industry Legacy</p>
+                    </div>
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm">
+                        <h3 class="text-3xl font-bold text-primary mb-2">4th</h3>
+                        <p class="text-gray-600">Generation Leadership</p>
+                    </div>
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm">
+                        <h3 class="text-3xl font-bold text-primary mb-2">100%</h3>
+                        <p class="text-gray-600">Quality Focused Processing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include('partials/contact-strip', { contactSectionId: 'contact-home', contactHeading: 'Let’s talk trade', contactSub: 'Share your requirement by phone, WhatsApp, or email—or use our enquiry form for detailed specs.' }) %>
+    </main>

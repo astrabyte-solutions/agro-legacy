@@ -1,0 +1,69 @@
+<main class="pt-20 min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+        <nav class="text-sm text-gray-500 mb-6 flex flex-wrap items-center gap-2" aria-label="Breadcrumb">
+            <a href="/" class="hover:text-primary">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="/certificates" class="hover:text-primary">Certificates</a>
+            <span aria-hidden="true">/</span>
+            <span class="text-gray-800 font-medium truncate max-w-[200px] md:max-w-none"><%= cert.title %></span>
+        </nav>
+
+        <div class="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-10">
+            <aside class="lg:w-80 shrink-0 space-y-4">
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-lg p-6">
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary text-xl mb-4">
+                        <i class="<%= cert.icon %>"></i>
+                    </div>
+                    <span class="inline-block text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 px-2.5 py-1 rounded-full mb-3"><%= cert.badge %></span>
+                    <h1 class="text-2xl font-heading font-bold text-secondary leading-tight mb-2"><%= cert.title %></h1>
+                    <p class="text-sm text-primary font-medium mb-4"><%= cert.subtitle %></p>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6"><%= cert.description %></p>
+                    <div class="flex flex-col gap-2">
+                        <a href="<%= pdfUrl %>" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full bg-primary text-white font-bold py-3 rounded-xl hover:bg-opacity-90 transition-all">
+                            <i class="fa-solid fa-up-right-from-square"></i> Open in new tab
+                        </a>
+                        <a href="<%= pdfUrl %>" download="<%= cert.downloadName %>" class="flex items-center justify-center gap-2 w-full border-2 border-primary text-primary font-bold py-3 rounded-xl hover:bg-primary hover:text-white transition-all">
+                            <i class="fa-solid fa-download"></i> Download PDF
+                        </a>
+                        <a href="/certificates" class="flex items-center justify-center gap-2 w-full text-gray-600 font-semibold py-2 hover:text-primary transition-colors">
+                            <i class="fa-solid fa-arrow-left"></i> All certificates
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-gray-100 p-5">
+                    <p class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Other documents</p>
+                    <ul class="space-y-2">
+                        <% allCerts.filter(function(x){ return x.slug !== cert.slug; }).forEach(function(other) { %>
+                        <li>
+                            <a href="/certificates/<%= other.slug %>" class="flex items-center gap-2 text-sm text-gray-700 hover:text-primary font-medium py-1.5 border-b border-transparent hover:border-primary/30 transition-colors">
+                                <i class="fa-regular fa-file-pdf text-red-600"></i>
+                                <%= other.title %>
+                            </a>
+                        </li>
+                        <% }); %>
+                    </ul>
+                </div>
+            </aside>
+
+            <div class="flex-1 min-w-0">
+                <div class="bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden">
+                    <div class="bg-gray-100 px-4 py-3 border-b border-gray-200 flex items-center justify-between gap-4">
+                        <span class="text-sm font-semibold text-gray-700 truncate"><%= cert.downloadName %></span>
+                        <span class="text-xs text-gray-500 hidden sm:inline">Use controls in the viewer or open in a new tab</span>
+                    </div>
+                    <div class="relative bg-gray-200/50" style="min-height: 75vh;">
+                        <iframe
+                            title="<%= cert.title %> — PDF"
+                            src="<%= pdfUrl %>#toolbar=1&navpanes=0"
+                            class="absolute inset-0 w-full h-full min-h-[75vh] border-0"
+                        ></iframe>
+                    </div>
+                    <p class="text-xs text-gray-500 px-4 py-3 bg-gray-50 border-t border-gray-100">
+                        If the document does not load, your browser may block embedded PDFs—use “Open in new tab” or “Download” above.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

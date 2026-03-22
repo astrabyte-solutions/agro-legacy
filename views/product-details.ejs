@@ -1,0 +1,272 @@
+<main>
+    <section id="product-hero" class="pt-20 pb-12 md:pb-16 bg-beige/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="text-sm text-gray-500 mb-8 flex flex-wrap items-center gap-2" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-primary">Home</a>
+                <span aria-hidden="true">/</span>
+                <a href="/products" class="hover:text-primary">Products</a>
+                <span aria-hidden="true">/</span>
+                <a href="/products/<%= product.category %>" class="hover:text-primary"><%= product.categoryLabel %></a>
+                <span aria-hidden="true">/</span>
+                <span class="text-gray-800 font-medium truncate max-w-[200px] sm:max-w-md"><%= product.name %></span>
+            </nav>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div id="gallery-container" class="space-y-4">
+                    <div class="aspect-square rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-xl">
+                        <img class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" src="<%= assetUrl(product.imageFile) %>" alt="<%= product.name %>" />
+                    </div>
+                </div>
+
+                <div id="product-info" class="flex flex-col">
+                    <div class="mb-4">
+                        <span class="inline-block px-3 py-1 bg-accent/10 text-secondary font-semibold text-sm rounded-md tracking-wider uppercase"><%= product.categoryLabel %></span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4 leading-tight"><%= product.name %></h1>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="flex text-accent">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-gray-500 text-sm border-l pl-4 border-gray-300">60+ Years Excellence</span>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8"><%= product.description %></p>
+
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase font-bold tracking-tighter">Processing</p>
+                                <p class="font-semibold">Supervised &amp; graded</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+                                <i class="fa-solid fa-earth-americas"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase font-bold tracking-tighter">Supply</p>
+                                <p class="font-semibold">Domestic &amp; export</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-auto space-y-4">
+                        <a href="/enquiry" class="w-full bg-primary text-white text-lg font-bold py-5 rounded-xl hover:bg-green-900 transition-all shadow-lg flex items-center justify-center gap-3 group">
+                            <i class="fa-solid fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                            Enquire for pricing &amp; availability
+                        </a>
+                        <p class="text-center text-sm text-gray-500"><%= product.shortDescription %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specifications" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-end justify-between mb-10 gap-4">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl font-display font-bold text-gray-900 mb-4">Variants in this range</h2>
+                    <p class="text-gray-600"><%= specIntro %></p>
+                </div>
+            </div>
+
+            <div class="overflow-hidden rounded-2xl border border-gray-100 shadow-sm">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-gray-50 border-b border-gray-100">
+                            <th class="px-6 md:px-8 py-5 text-sm font-bold text-gray-700 uppercase tracking-wider">Product</th>
+                            <th class="px-6 md:px-8 py-5 text-sm font-bold text-gray-700 uppercase tracking-wider">Summary</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <% categoryVariants.forEach(function(row) { %>
+                        <tr class="<%= row.current ? 'bg-primary/5' : '' %>">
+                            <td class="px-6 md:px-8 py-5 font-semibold text-gray-900 bg-gray-50/30 w-2/5 md:w-1/3">
+                                <% if (row.current) { %>
+                                <span class="text-primary"><%= row.name %></span>
+                                <span class="ml-2 text-xs font-bold uppercase text-accent">(this page)</span>
+                                <% } else { %>
+                                <a href="/products/<%= row.category %>/<%= row.slug %>" class="text-primary hover:underline font-semibold"><%= row.name %></a>
+                                <% } %>
+                            </td>
+                            <td class="px-6 md:px-8 py-5 text-gray-600 text-sm md:text-base"><%= row.description %></td>
+                        </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="quality-process" class="py-16 bg-primary text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-1/3 h-full opacity-10">
+            <i class="fa-solid fa-wheat-awn text-[300px] rotate-12"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">Our Legacy of Quality</h2>
+                <p class="text-green-100 text-lg">Over six decades of expertise in sourcing and processing agricultural commodities.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                    <div class="text-accent text-4xl mb-6"><i class="fa-solid fa-microscope"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Rigorous Testing</h3>
+                    <p class="text-white/80">Multi-level quality checks to meet buyer specifications.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                    <div class="text-accent text-4xl mb-6"><i class="fa-solid fa-industry"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Modern Processing</h3>
+                    <p class="text-white/80">Equipped sorting and cleaning lines for consistent output.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                    <div class="text-accent text-4xl mb-6"><i class="fa-solid fa-ship"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Logistics</h3>
+                    <p class="text-white/80">Coordination for timely dispatch and documentation support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="packaging-delivery" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 border border-gray-100 rounded-2xl p-8">
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-4">Packaging</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li>25 kg and 50 kg bag options</li>
+                        <li>Custom packaging on request</li>
+                        <li>Clean, market-ready dispatch</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-2xl p-8">
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-4">Delivery support</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li>Dispatch planning for bulk orders</li>
+                        <li>Availability and pricing follow-up</li>
+                        <li>Export documentation assistance where applicable</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="applications" class="py-16 bg-beige/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-heading font-bold text-primary mb-3">Applications</h2>
+                <p class="text-gray-600">Suitable for wholesalers, retail packers, and food businesses.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-lg font-bold text-secondary mb-2">Retail &amp; household</h3>
+                    <p class="text-gray-600 text-sm">Consistent quality for consumer packs.</p>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-lg font-bold text-secondary mb-2">Bulk trading</h3>
+                    <p class="text-gray-600 text-sm">Stable grading for mandi and distributors.</p>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-lg font-bold text-secondary mb-2">Food industry</h3>
+                    <p class="text-gray-600 text-sm">Suitable for processors with defined specs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="product-faq" class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-heading font-bold text-primary">Frequently asked questions</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-xl p-5">
+                    <h4 class="font-bold text-secondary mb-2">What is the minimum order quantity?</h4>
+                    <p class="text-gray-600 text-sm">MOQ depends on product, packaging, and destination—share your need on the enquiry form.</p>
+                </div>
+                <div class="border border-gray-200 rounded-xl p-5">
+                    <h4 class="font-bold text-secondary mb-2">Can I request custom packaging?</h4>
+                    <p class="text-gray-600 text-sm">Yes, subject to feasibility and order volume.</p>
+                </div>
+                <div class="border border-gray-200 rounded-xl p-5">
+                    <h4 class="font-bold text-secondary mb-2">How do I get a price?</h4>
+                    <p class="text-gray-600 text-sm">Use Enquire for pricing and our team will respond.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="product-snapshot" class="py-16 bg-primary/5 border-t border-primary/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-heading font-bold text-primary mb-3">Snapshot</h2>
+                <p class="text-gray-600">At a glance</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+                <div class="bg-white rounded-2xl border border-gray-100 p-6 text-center">
+                    <p class="text-3xl font-bold text-primary">A+</p>
+                    <p class="text-gray-600 mt-2 text-sm">Process focus</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-gray-100 p-6 text-center">
+                    <p class="text-3xl font-bold text-primary"><%= variantCount %></p>
+                    <p class="text-gray-600 mt-2 text-sm">Items in range</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-gray-100 p-6 text-center">
+                    <p class="text-3xl font-bold text-primary">Bulk</p>
+                    <p class="text-gray-600 mt-2 text-sm">Supply ready</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-gray-100 p-6 text-center">
+                    <p class="text-3xl font-bold text-primary">Fast</p>
+                    <p class="text-gray-600 mt-2 text-sm">Enquiry response</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="related-products" class="py-16 bg-beige/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-10">
+                <h2 class="text-3xl font-display font-bold text-gray-900">More products</h2>
+                <a href="/products" class="text-primary font-bold hover:underline flex items-center gap-2">
+                    View all <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <% relatedProducts.forEach(function(rp) { %>
+                <a href="/products/<%= rp.category %>/<%= rp.slug %>" class="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all block">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="<%= assetUrl(rp.imageFile) %>" alt="<%= rp.name %>" />
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xs font-bold text-primary uppercase mb-1"><%= rp.categoryLabel %></p>
+                        <h3 class="font-display font-bold text-lg text-gray-900 group-hover:text-primary transition-colors"><%= rp.name %></h3>
+                        <p class="text-sm text-gray-500 mt-2 line-clamp-2"><%= rp.shortDescription %></p>
+                    </div>
+                </a>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <section id="trust-cta" class="py-16 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12 bg-secondary/5 rounded-3xl p-8 md:p-12">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-display font-bold text-secondary mb-4">Ready to partner?</h2>
+                    <p class="text-gray-600 mb-8 max-w-xl">Tell us your product, quantity, and destination—we will get back with availability and next steps.</p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-8 opacity-60">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-award text-2xl text-accent"></i> <span class="font-bold text-xs uppercase tracking-widest">ISO</span></div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-2xl text-accent"></i> <span class="font-bold text-xs uppercase tracking-widest">FSSAI</span></div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-leaf text-2xl text-accent"></i> <span class="font-bold text-xs uppercase tracking-widest">APEDA</span></div>
+                    </div>
+                </div>
+                <div class="w-full md:w-auto">
+                    <a href="/enquiry" class="inline-flex w-full md:w-auto justify-center bg-accent text-white px-12 py-5 rounded-2xl font-display font-bold text-xl hover:bg-yellow-700 transition-all shadow-xl hover:-translate-y-1">
+                        Request a quote <i class="fa-solid fa-chevron-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
