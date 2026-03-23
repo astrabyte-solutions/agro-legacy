@@ -54,7 +54,8 @@ const familySpecIntro = {
   moong: 'Green gram (moong) grades including polish and dal lines—select a line item for specifications.',
   chana: 'Bengal gram (chana) whole and dal grades for different market segments.',
   beans: 'Black-eyed and brown-eyed bean lines for domestic and export-oriented buyers.',
-  peas: 'Cow peas and white chick peas for broad trade and distribution requirements.',
+  peas: 'Cow peas and related lines for broad trade and distribution requirements.',
+  'white-chickpeas': 'White chickpeas are offered as a dedicated product head for bulk and export-oriented buyers.',
   maize: 'Maize is offered as a dedicated product head for bulk supply and trade programs.',
   'black-gram': 'Black gram is offered as a dedicated product head for edible pulse trade and distribution.',
 };
@@ -190,3 +191,4 @@ app.use((req, res) => {
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 });
+

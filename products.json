@@ -146,10 +146,10 @@
       "description": "Bold Gram Dal is prepared for dal trade and packing lines requiring bold split appearance."
     },
     {
-      "slug": "white-chick-peas",
-      "name": "White Chick Peas",
-      "category": " White Chickpeas",
-      "categoryLabel": " White Chickpeas",
+      "slug": "white-chickpeas",
+      "name": "White Chickpeas",
+      "category": "white-chickpeas",
+      "categoryLabel": "White Chickpeas",
       "imageFile": "white chick peas.jpg",
       "shortDescription": "Kabuli-type white chickpeas—cleaned and graded for export-oriented buyers.",
       "description": "White chick peas are offered with attention to uniformity and cleanliness for retail, packing, and export channels."
@@ -210,3 +210,4 @@
     }
   ]
 }
+
