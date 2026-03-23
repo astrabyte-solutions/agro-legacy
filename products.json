@@ -1,8 +1,8 @@
 {
   "filterCategories": [
     { "id": "all", "label": "All Products" },
-    { "id": "toor", "label": "Toor Dal" },
-    { "id": "moong", "label": "Moong" },
+    { "id": "toor", "label": "Pigeon peas (Toor)" },
+    { "id": "moong", "label": "Green gram (moong)" },
     { "id": "chana", "label": "Chana (Bengal Gram)" },
     { "id": "beans", "label": "Cow Peas (CHAWLA)" },
     { "id": "white-chickpeas", "label": "White Chickpeas" },
