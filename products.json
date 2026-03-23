@@ -5,7 +5,7 @@
     { "id": "moong", "label": "Moong" },
     { "id": "chana", "label": "Chana (Bengal Gram)" },
     { "id": "beans", "label": "Beans" },
-    { "id": "peas", "label": "Peas" },
+    { "id": "white-chickpeas", "label": "White Chickpeas" },
     { "id": "maize", "label": "Maize" },
     { "id": "black-gram", "label": "Black Gram" }
   ],
@@ -87,7 +87,7 @@
       "name": "Moong Dal Bold",
       "category": "moong",
       "categoryLabel": "Moong",
-      "imageFile": "moong polish Bold.jpg",
+      "imageFile": "moong-daal-chilka.webp",
       "shortDescription": "Bold split moong (dal) for kitchens, packers, and food processors.",
       "description": "Moong Dal Bold is graded for bold split size and consistent finish—suitable for dal mills and retail lines that specify bold dal."
     },
@@ -96,7 +96,7 @@
       "name": "Moong Dal Medium",
       "category": "moong",
       "categoryLabel": "Moong",
-      "imageFile": "Moong polish medium.webp",
+      "imageFile": "moong-daal-chilka.webp",
       "shortDescription": "Medium split moong for steady wholesale and mandi supply.",
       "description": "Moong Dal Medium is positioned for everyday movement with reliable grading and supervised processing."
     },
@@ -123,7 +123,7 @@
       "name": "Chana Medium Gram",
       "category": "chana",
       "categoryLabel": "Chana",
-      "imageFile": "chana (bengal gram) bold gram.jpg",
+      "imageFile": "raw-chana.webp",
       "shortDescription": "Medium-grade whole Bengal gram for volume buyers.",
       "description": "Medium gram chana offers balanced specification for traders needing steady supply across seasons."
     },
@@ -148,8 +148,8 @@
     {
       "slug": "white-chick-peas",
       "name": "White Chick Peas",
-      "category": "peas",
-      "categoryLabel": "Peas",
+      "category": " White Chickpeas",
+      "categoryLabel": " White Chickpeas",
       "imageFile": "white chick peas.jpg",
       "shortDescription": "Kabuli-type white chickpeas—cleaned and graded for export-oriented buyers.",
       "description": "White chick peas are offered with attention to uniformity and cleanliness for retail, packing, and export channels."
@@ -164,31 +164,13 @@
       "description": "Maize is supplied with controlled quality parameters suitable for human consumption or feed use as per buyer discussion."
     },
     {
-      "slug": "green-gram-whole",
-      "name": "Green Gram Whole",
-      "category": "moong",
-      "categoryLabel": "Moong",
-      "imageFile": "Moong polish medium.webp",
-      "shortDescription": "Whole green gram supplied for machine-cleaned edible trade channels.",
-      "description": "Green Gram Whole is sorted and cleaned for human-consumable use with steady quality parameters for retail and wholesale movement."
-    },
-    {
       "slug": "green-gram-dal",
       "name": "Green Gram Dal",
       "category": "moong",
       "categoryLabel": "Moong",
-      "imageFile": "moong polish Bold.jpg",
+      "imageFile": "GREEN GRAM SPLIT.jpg",
       "shortDescription": "Split moong dal line for regular trade and pack-size distribution.",
       "description": "Green Gram Dal is processed for consistency in appearance and cooking quality, supporting recurring supply requirements."
-    },
-    {
-      "slug": "green-gram-split",
-      "name": "Green Gram Split",
-      "category": "moong",
-      "categoryLabel": "Moong",
-      "imageFile": "GREEN GRAM SPLIT.jpg",
-      "shortDescription": "Clean split green gram specification for value and volume segments.",
-      "description": "Green Gram Split is prepared through defined processing stages from raw material intake to final grading and dispatch."
     },
     {
       "slug": "black-eyed-beans",
@@ -200,8 +182,8 @@
       "description": "Black Eyed Beans are offered as machine-cleaned edible product lines with batch-wise sorting and quality checks."
     },
     {
-      "slug": "cow-peas",
-      "name": "Cow Peas",
+      "slug": "cow-peas-chawla",
+      "name": "Cow Peas (CHAWLA)",
       "category": "beans",
       "categoryLabel": "Beans",
       "imageFile": "Cow Peas.jpg",
