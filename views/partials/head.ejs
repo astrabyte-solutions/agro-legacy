@@ -4,7 +4,15 @@
     <script>
         window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/vendor/fontsource/poppins/400.css">
+    <link rel="stylesheet" href="/vendor/fontsource/poppins/500.css">
+    <link rel="stylesheet" href="/vendor/fontsource/poppins/600.css">
+    <link rel="stylesheet" href="/vendor/fontsource/poppins/700.css">
+    <link rel="stylesheet" href="/vendor/fontsource/poppins/800.css">
+    <link rel="stylesheet" href="/vendor/fontsource/montserrat/600.css">
+    <link rel="stylesheet" href="/vendor/fontsource/montserrat/700.css">
+    <link rel="stylesheet" href="/vendor/fontsource/montserrat/800.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/assets/favicon.png">
@@ -22,18 +30,66 @@
                         beige: '#FDFBF7',
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Montserrat', 'sans-serif'],
-                        serif: ['Montserrat', 'sans-serif'],
-                        display: ['Montserrat', 'sans-serif'],
+                        sans: ['Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'system-ui', 'sans-serif'],
+                        heading: ['Poppins', 'Montserrat', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'system-ui', 'sans-serif'],
+                        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+                        display: ['Poppins', 'Montserrat', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'system-ui', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
     <style>
+        :root {
+            --text-heading: #173f20;
+            --text-body: #4b5563;
+            --text-strong: #1f2937;
+            --underline-accent: #C8A951;
+        }
+        body {
+            font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
+            color: var(--text-body);
+            line-height: 1.7;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .font-heading, .font-display {
+            font-family: Poppins, Montserrat, "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
+            letter-spacing: -0.01em;
+        }
+        .font-serif { font-family: Georgia, Cambria, "Times New Roman", serif; }
+        h1, h2, h3, h4 {
+            color: inherit;
+            line-height: 1.2;
+            margin: 0;
+        }
+        h1 { font-weight: 800; letter-spacing: -0.02em; }
+        h2 { font-weight: 700; letter-spacing: -0.015em; }
+        h3, h4 { font-weight: 700; }
+        p { color: inherit; line-height: 1.75; }
+        strong, b { color: var(--text-strong); font-weight: 700; }
+        em, i { font-style: italic; }
+        u {
+            text-decoration-color: var(--underline-accent);
+            text-decoration-thickness: 2px;
+            text-underline-offset: 3px;
+        }
+        .kicker {
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-weight: 700;
+            font-size: 0.75rem;
+        }
+        .subheading {
+            font-size: clamp(1.125rem, 1.5vw, 1.35rem);
+            font-weight: 600;
+            color: #374151;
+        }
+        .paragraph {
+            font-size: clamp(1rem, 1.05vw, 1.125rem);
+            line-height: 1.8;
+        }
         ::-webkit-scrollbar { display: none; }
         .glass-effect { background: rgba(247, 244, 236, 0.95); backdrop-filter: blur(10px); }
         .hover-lift { transition: transform 0.3s ease; }

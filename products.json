@@ -4,7 +4,8 @@
     { "id": "toor", "label": "Toor Dal" },
     { "id": "moong", "label": "Moong" },
     { "id": "chana", "label": "Chana (Bengal Gram)" },
-    { "id": "others", "label": "Others" }
+    { "id": "beans", "label": "Beans" },
+    { "id": "peas", "label": "Peas" }
   ],
   "products": [
     {
@@ -136,8 +137,8 @@
     {
       "slug": "white-chick-peas",
       "name": "White Chick Peas",
-      "category": "others",
-      "categoryLabel": "Others",
+      "category": "peas",
+      "categoryLabel": "Peas",
       "imageFile": "white chick peas.jpg",
       "shortDescription": "Kabuli-type white chickpeas—cleaned and graded for export-oriented buyers.",
       "description": "White chick peas are offered with attention to uniformity and cleanliness for retail, packing, and export channels."
@@ -145,11 +146,74 @@
     {
       "slug": "maize",
       "name": "Maize",
-      "category": "others",
-      "categoryLabel": "Others",
+      "category": "peas",
+      "categoryLabel": "Peas",
       "imageFile": "maize.jpg",
       "shortDescription": "Yellow maize for food and feed applications with moisture checks.",
       "description": "Maize is supplied with controlled quality parameters suitable for human consumption or feed use as per buyer discussion."
+    },
+    {
+      "slug": "green-gram-whole",
+      "name": "Green Gram Whole",
+      "category": "moong",
+      "categoryLabel": "Moong",
+      "imageFile": "moong polish Bold.jpg",
+      "shortDescription": "Whole green gram supplied for machine-cleaned edible trade channels.",
+      "description": "Green Gram Whole is sorted and cleaned for human-consumable use with steady quality parameters for retail and wholesale movement."
+    },
+    {
+      "slug": "green-gram-dal",
+      "name": "Green Gram Dal",
+      "category": "moong",
+      "categoryLabel": "Moong",
+      "imageFile": "Moong polish medium.webp",
+      "shortDescription": "Split moong dal line for regular trade and pack-size distribution.",
+      "description": "Green Gram Dal is processed for consistency in appearance and cooking quality, supporting recurring supply requirements."
+    },
+    {
+      "slug": "green-gram-split",
+      "name": "Green Gram Split",
+      "category": "moong",
+      "categoryLabel": "Moong",
+      "imageFile": "GREEN GRAM SPLIT.jpg",
+      "shortDescription": "Clean split green gram specification for value and volume segments.",
+      "description": "Green Gram Split is prepared through defined processing stages from raw material intake to final grading and dispatch."
+    },
+    {
+      "slug": "black-eyed-beans",
+      "name": "Black Eyed Beans",
+      "category": "beans",
+      "categoryLabel": "Beans",
+      "imageFile": "Black-Eyed-Beans.jpg",
+      "shortDescription": "Black eyed beans for domestic and export-oriented bulk buyers.",
+      "description": "Black Eyed Beans are offered as machine-cleaned edible product lines with batch-wise sorting and quality checks."
+    },
+    {
+      "slug": "cow-peas",
+      "name": "Cow Peas",
+      "category": "peas",
+      "categoryLabel": "Peas",
+      "imageFile": "Cow Peas.jpg",
+      "shortDescription": "Cow peas line for broad mandi and distribution channels.",
+      "description": "Cow Peas are sourced through established procurement networks and supplied with consistent quality planning."
+    },
+    {
+      "slug": "brown-eyed-beans",
+      "name": "Brown Eyed Beans",
+      "category": "beans",
+      "categoryLabel": "Beans",
+      "imageFile": "Brown Eyed Beans.png",
+      "shortDescription": "Brown eyed beans from supervised processing and cleaning operations.",
+      "description": "Brown Eyed Beans are prepared for buyers seeking alternate bean lines from a single agro commodity supplier."
+    },
+    {
+      "slug": "black-gram",
+      "name": "Black Gram",
+      "category": "beans",
+      "categoryLabel": "Beans",
+      "imageFile": "Black Gram.jpg",
+      "shortDescription": "Black gram line for edible pulse distribution channels.",
+      "description": "Black Gram is supplied through a structured process framework designed for dependable quality and dispatch reliability."
     }
   ]
 }

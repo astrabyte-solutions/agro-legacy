@@ -13,6 +13,8 @@ app.use(expressLayouts);
 app.set('layout', 'layouts/main');
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use('/vendor/fontawesome', express.static(path.join(__dirname, 'node_modules', '@fortawesome', 'fontawesome-free')));
+app.use('/vendor/fontsource', express.static(path.join(__dirname, 'node_modules', '@fontsource')));
 
 app.use((req, res, next) => {
   res.locals.assetUrl = (filename) => '/assets/' + encodeURIComponent(filename);
@@ -51,7 +53,8 @@ const familySpecIntro = {
   toor: 'All pigeon pea (Toor) grades listed below are processed under supervision. Click a variant for its detail page.',
   moong: 'Green gram (moong) grades including polish and dal lines—select a line item for specifications.',
   chana: 'Bengal gram (chana) whole and dal grades for different market segments.',
-  others: 'Additional commodities in our portfolio.',
+  beans: 'Black-eyed, brown-eyed, and black gram bean lines for domestic and export-oriented buyers.',
+  peas: 'Cow peas, white chick peas, and related lines for broad trade and distribution requirements.',
 };
 
 /** Product types only: /products */

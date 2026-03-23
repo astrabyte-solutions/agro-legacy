@@ -28,9 +28,10 @@
                         </div>
                         <span class="text-gray-500 text-sm border-l pl-4 border-gray-300">60+ Years Excellence</span>
                     </div>
-                    <p class="text-lg text-gray-600 leading-relaxed mb-8"><%= product.description %></p>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6"><%= product.description %></p>
+                    <p class="text-gray-600 leading-relaxed mb-8">Suitable for domestic distribution and international import-export programs, based on buyer specification and shipment plan.</p>
 
-                    <div class="grid grid-cols-2 gap-6 mb-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
                                 <i class="fa-solid fa-certificate"></i>
@@ -46,15 +47,29 @@
                             </div>
                             <div>
                                 <p class="text-xs text-gray-500 uppercase font-bold tracking-tighter">Supply</p>
-                                <p class="font-semibold">Domestic &amp; export</p>
+                                <p class="font-semibold">Import-export ready</p>
                             </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+                        <div class="rounded-xl border border-gray-100 bg-white p-4">
+                            <p class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">Specification</p>
+                            <p class="text-sm font-semibold text-secondary">Buyer-defined grades</p>
+                        </div>
+                        <div class="rounded-xl border border-gray-100 bg-white p-4">
+                            <p class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">Order Type</p>
+                            <p class="text-sm font-semibold text-secondary">Bulk & contract lots</p>
+                        </div>
+                        <div class="rounded-xl border border-gray-100 bg-white p-4">
+                            <p class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">Support</p>
+                            <p class="text-sm font-semibold text-secondary">Dispatch + docs help</p>
                         </div>
                     </div>
 
                     <div class="mt-auto space-y-4">
                         <a href="/enquiry" class="w-full bg-primary text-white text-lg font-bold py-5 rounded-xl hover:bg-green-900 transition-all shadow-lg flex items-center justify-center gap-3 group">
                             <i class="fa-solid fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
-                            Enquire for pricing &amp; availability
+                            Request import-export quote
                         </a>
                         <p class="text-center text-sm text-gray-500"><%= product.shortDescription %></p>
                     </div>
@@ -67,7 +82,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-end justify-between mb-10 gap-4">
                 <div class="max-w-2xl">
-                    <h2 class="text-3xl font-display font-bold text-gray-900 mb-4">Variants in this range</h2>
+                    <h2 class="text-3xl font-display font-bold text-gray-900 mb-2">Available trade variants</h2>
+                    <p class="text-sm uppercase tracking-widest text-gray-500 font-bold mb-3">Variant matrix</p>
                     <p class="text-gray-600"><%= specIntro %></p>
                 </div>
             </div>
@@ -106,8 +122,8 @@
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">Our Legacy of Quality</h2>
-                <p class="text-green-100 text-lg">Over six decades of expertise in sourcing and processing agricultural commodities.</p>
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">Quality and export operations</h2>
+                <p class="text-green-100 text-lg">Over six decades of sourcing, processing, and shipment coordination for agro commodity buyers.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
@@ -123,7 +139,7 @@
                 <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
                     <div class="text-accent text-4xl mb-6"><i class="fa-solid fa-ship"></i></div>
                     <h3 class="text-xl font-bold mb-4">Logistics</h3>
-                    <p class="text-white/80">Coordination for timely dispatch and documentation support.</p>
+                    <p class="text-white/80">Coordination for timely dispatch, port planning, and export documentation support.</p>
                 </div>
             </div>
         </div>
@@ -132,7 +148,7 @@
     <section id="packaging-delivery" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-gray-50 border border-gray-100 rounded-2xl p-8">
+                <div class="bg-gray-50 border border-gray-100 rounded-2xl p-8 shadow-sm">
                     <h3 class="text-2xl font-heading font-bold text-primary mb-4">Packaging</h3>
                     <ul class="space-y-3 text-gray-700">
                         <li>25 kg and 50 kg bag options</li>
@@ -140,10 +156,10 @@
                         <li>Clean, market-ready dispatch</li>
                     </ul>
                 </div>
-                <div class="bg-gray-50 border border-gray-100 rounded-2xl p-8">
-                    <h3 class="text-2xl font-heading font-bold text-primary mb-4">Delivery support</h3>
+                <div class="bg-gray-50 border border-gray-100 rounded-2xl p-8 shadow-sm">
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-4">Dispatch &amp; export support</h3>
                     <ul class="space-y-3 text-gray-700">
-                        <li>Dispatch planning for bulk orders</li>
+                        <li>Dispatch planning for bulk orders and shipment schedules</li>
                         <li>Availability and pricing follow-up</li>
                         <li>Export documentation assistance where applicable</li>
                     </ul>
@@ -156,7 +172,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
                 <h2 class="text-3xl font-heading font-bold text-primary mb-3">Applications</h2>
-                <p class="text-gray-600">Suitable for wholesalers, retail packers, and food businesses.</p>
+                <p class="text-gray-600">Suitable for wholesalers, importers, retail packers, and food businesses.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
@@ -165,11 +181,11 @@
                 </div>
                 <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
                     <h3 class="text-lg font-bold text-secondary mb-2">Bulk trading</h3>
-                    <p class="text-gray-600 text-sm">Stable grading for mandi and distributors.</p>
+                    <p class="text-gray-600 text-sm">Stable grading for mandi, distributors, and import-export buyers.</p>
                 </div>
                 <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
                     <h3 class="text-lg font-bold text-secondary mb-2">Food industry</h3>
-                    <p class="text-gray-600 text-sm">Suitable for processors with defined specs.</p>
+                    <p class="text-gray-600 text-sm">Suitable for processors with defined quality and shipment specs.</p>
                 </div>
             </div>
         </div>
@@ -191,7 +207,7 @@
                 </div>
                 <div class="border border-gray-200 rounded-xl p-5">
                     <h4 class="font-bold text-secondary mb-2">How do I get a price?</h4>
-                    <p class="text-gray-600 text-sm">Use Enquire for pricing and our team will respond.</p>
+                    <p class="text-gray-600 text-sm">Use Enquire for pricing; share product, quantity, destination country, and timeline.</p>
                 </div>
             </div>
         </div>
@@ -214,7 +230,7 @@
                 </div>
                 <div class="bg-white rounded-2xl border border-gray-100 p-6 text-center">
                     <p class="text-3xl font-bold text-primary">Bulk</p>
-                    <p class="text-gray-600 mt-2 text-sm">Supply ready</p>
+                    <p class="text-gray-600 mt-2 text-sm">Contract supply ready</p>
                 </div>
                 <div class="bg-white rounded-2xl border border-gray-100 p-6 text-center">
                     <p class="text-3xl font-bold text-primary">Fast</p>
@@ -234,7 +250,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <% relatedProducts.forEach(function(rp) { %>
-                <a href="/products/<%= rp.category %>/<%= rp.slug %>" class="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all block">
+                <a href="/products/<%= rp.category %>/<%= rp.slug %>" class="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all block">
                     <div class="h-48 overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="<%= assetUrl(rp.imageFile) %>" alt="<%= rp.name %>" />
                     </div>
@@ -253,8 +269,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-12 bg-secondary/5 rounded-3xl p-8 md:p-12">
                 <div class="text-center md:text-left">
-                    <h2 class="text-3xl font-display font-bold text-secondary mb-4">Ready to partner?</h2>
-                    <p class="text-gray-600 mb-8 max-w-xl">Tell us your product, quantity, and destination—we will get back with availability and next steps.</p>
+                    <h2 class="text-3xl font-display font-bold text-secondary mb-4">Ready for your next shipment?</h2>
+                    <p class="text-gray-600 mb-8 max-w-xl">Share product, quantity, destination country, and timeline; our trade team will respond with availability and quotation.</p>
                     <div class="flex flex-wrap justify-center md:justify-start gap-8 opacity-60">
                         <div class="flex items-center gap-2"><i class="fa-solid fa-award text-2xl text-accent"></i> <span class="font-bold text-xs uppercase tracking-widest">ISO</span></div>
                         <div class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-2xl text-accent"></i> <span class="font-bold text-xs uppercase tracking-widest">FSSAI</span></div>
@@ -263,7 +279,7 @@
                 </div>
                 <div class="w-full md:w-auto">
                     <a href="/enquiry" class="inline-flex w-full md:w-auto justify-center bg-accent text-white px-12 py-5 rounded-2xl font-display font-bold text-xl hover:bg-yellow-700 transition-all shadow-xl hover:-translate-y-1">
-                        Request a quote <i class="fa-solid fa-chevron-right ml-2 text-sm"></i>
+                        Request trade quote <i class="fa-solid fa-chevron-right ml-2 text-sm"></i>
                     </a>
                 </div>
             </div>
