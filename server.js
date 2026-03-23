@@ -53,8 +53,10 @@ const familySpecIntro = {
   toor: 'All pigeon pea (Toor) grades listed below are processed under supervision. Click a variant for its detail page.',
   moong: 'Green gram (moong) grades including polish and dal lines—select a line item for specifications.',
   chana: 'Bengal gram (chana) whole and dal grades for different market segments.',
-  beans: 'Black-eyed, brown-eyed, and black gram bean lines for domestic and export-oriented buyers.',
-  peas: 'Cow peas, white chick peas, and related lines for broad trade and distribution requirements.',
+  beans: 'Black-eyed and brown-eyed bean lines for domestic and export-oriented buyers.',
+  peas: 'Cow peas and white chick peas for broad trade and distribution requirements.',
+  maize: 'Maize is offered as a dedicated product head for bulk supply and trade programs.',
+  'black-gram': 'Black gram is offered as a dedicated product head for edible pulse trade and distribution.',
 };
 
 /** Product types only: /products */

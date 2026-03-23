@@ -5,7 +5,9 @@
     { "id": "moong", "label": "Moong" },
     { "id": "chana", "label": "Chana (Bengal Gram)" },
     { "id": "beans", "label": "Beans" },
-    { "id": "peas", "label": "Peas" }
+    { "id": "peas", "label": "Peas" },
+    { "id": "maize", "label": "Maize" },
+    { "id": "black-gram", "label": "Black Gram" }
   ],
   "products": [
     {
@@ -67,7 +69,7 @@
       "name": "Moong Polish Bold",
       "category": "moong",
       "categoryLabel": "Moong",
-      "imageFile": "moong polish Bold.jpg",
+      "imageFile": "moong-whole.jpeg",
       "shortDescription": "Bold green gram with polished finish and bright appearance.",
       "description": "Moong Polish Bold is cleaned and polished for premium retail and export-facing packs where visual appeal matters."
     },
@@ -99,11 +101,20 @@
       "description": "Moong Dal Medium is positioned for everyday movement with reliable grading and supervised processing."
     },
     {
+      "slug": "moong-mogar",
+      "name": "Moong Mogar",
+      "category": "moong",
+      "categoryLabel": "Moong",
+      "imageFile": "moong-mogar.jpg",
+      "shortDescription": "Washed split moong mogar suitable for domestic packs and export-oriented demand.",
+      "description": "Moong Mogar is processed for clean appearance, uniform split, and dependable cooking performance for retail, food-service, and trade programs."
+    },
+    {
       "slug": "chana-bold-gram",
       "name": "Chana Bold Gram",
       "category": "chana",
       "categoryLabel": "Chana",
-      "imageFile": "chana (bengal gram) bold gram.jpg",
+      "imageFile": "raw-chana.webp",
       "shortDescription": "Bold-size Bengal gram (kala chana) with strong body and uniform look.",
       "description": "Bold gram is sorted for size and cleanliness—suitable for domestic and export buyers who specify bold grade."
     },
@@ -118,21 +129,21 @@
     },
     {
       "slug": "chana-bold-gram-dal",
+      "name": "Chana Medium Gram Dal",
+      "category": "chana",
+      "categoryLabel": "Chana",
+      "imageFile": "chana-daal.jpg",
+      "shortDescription": "Medium split chana dal for broad market and value segments.",
+      "description": "Medium Gram Dal is processed for traders needing medium split specification with consistent supply planning."
+    },
+    {
+      "slug": "chana-medium-gram-dal",
       "name": "Chana Bold Gram Dal",
       "category": "chana",
       "categoryLabel": "Chana",
       "imageFile": "Bold gram dall.jpg",
       "shortDescription": "Bold chana dal (split) processed under supervision.",
       "description": "Bold Gram Dal is prepared for dal trade and packing lines requiring bold split appearance."
-    },
-    {
-      "slug": "chana-medium-gram-dal",
-      "name": "Chana Medium Gram Dal",
-      "category": "chana",
-      "categoryLabel": "Chana",
-      "imageFile": "Bold gram dall.jpg",
-      "shortDescription": "Medium split chana dal for broad market and value segments.",
-      "description": "Medium Gram Dal is processed for traders needing medium split specification with consistent supply planning."
     },
     {
       "slug": "white-chick-peas",
@@ -146,8 +157,8 @@
     {
       "slug": "maize",
       "name": "Maize",
-      "category": "peas",
-      "categoryLabel": "Peas",
+      "category": "maize",
+      "categoryLabel": "Maize",
       "imageFile": "maize.jpg",
       "shortDescription": "Yellow maize for food and feed applications with moisture checks.",
       "description": "Maize is supplied with controlled quality parameters suitable for human consumption or feed use as per buyer discussion."
@@ -191,8 +202,8 @@
     {
       "slug": "cow-peas",
       "name": "Cow Peas",
-      "category": "peas",
-      "categoryLabel": "Peas",
+      "category": "beans",
+      "categoryLabel": "Beans",
       "imageFile": "Cow Peas.jpg",
       "shortDescription": "Cow peas line for broad mandi and distribution channels.",
       "description": "Cow Peas are sourced through established procurement networks and supplied with consistent quality planning."
@@ -209,8 +220,8 @@
     {
       "slug": "black-gram",
       "name": "Black Gram",
-      "category": "beans",
-      "categoryLabel": "Beans",
+      "category": "black-gram",
+      "categoryLabel": "Black Gram",
       "imageFile": "Black Gram.jpg",
       "shortDescription": "Black gram line for edible pulse distribution channels.",
       "description": "Black Gram is supplied through a structured process framework designed for dependable quality and dispatch reliability."
