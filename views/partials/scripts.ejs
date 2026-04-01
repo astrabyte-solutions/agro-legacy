@@ -14,4 +14,47 @@
     mobileMenuBtn?.addEventListener('click', openMobileMenu);
     mobileMenuClose?.addEventListener('click', closeMobileMenu);
     mobileMenuBackdrop?.addEventListener('click', closeMobileMenu);
+
+    const footerSubscribeForm = document.getElementById('footerSubscribeForm');
+    const footerSubscribeStatus = document.getElementById('footerSubscribeStatus');
+    footerSubscribeForm?.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const submitButton = footerSubscribeForm.querySelector('button[type="submit"]');
+        const originalText = submitButton ? submitButton.textContent : '';
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Joining...';
+        }
+        if (footerSubscribeStatus) {
+            footerSubscribeStatus.className = 'hidden text-xs';
+            footerSubscribeStatus.textContent = '';
+        }
+        try {
+            const formData = new FormData(footerSubscribeForm);
+            const response = await fetch('/api/forms/subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(Object.fromEntries(formData.entries())),
+            });
+            const data = await response.json();
+            if (!response.ok || !data.ok) {
+                throw new Error(data.error || 'Unable to subscribe right now.');
+            }
+            footerSubscribeForm.reset();
+            if (footerSubscribeStatus) {
+                footerSubscribeStatus.textContent = 'Thank you for subscribing. We will share updates soon.';
+                footerSubscribeStatus.className = 'text-xs text-green-400';
+            }
+        } catch (error) {
+            if (footerSubscribeStatus) {
+                footerSubscribeStatus.textContent = error.message || 'Unable to subscribe right now.';
+                footerSubscribeStatus.className = 'text-xs text-red-400';
+            }
+        } finally {
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }
+        }
+    });
 </script>

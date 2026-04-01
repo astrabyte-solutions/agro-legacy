@@ -1,0 +1,43 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('contactFormStatus');
+        if (!form || !status) return;
+
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton ? submitButton.innerHTML : '';
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<span>Submitting...</span>';
+            }
+            status.className = 'hidden text-sm font-semibold';
+            status.textContent = '';
+
+            try {
+                const formData = new FormData(form);
+                const response = await fetch('/api/forms/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(Object.fromEntries(formData.entries())),
+                });
+                const data = await response.json();
+                if (!response.ok || !data.ok) {
+                    throw new Error(data.error || 'Unable to submit contact request right now.');
+                }
+                status.textContent = 'Thank you. Your request was submitted successfully.';
+                status.className = 'text-sm font-semibold text-green-600';
+                form.reset();
+            } catch (error) {
+                status.textContent = error.message || 'Unable to submit contact request right now.';
+                status.className = 'text-sm font-semibold text-red-600';
+            } finally {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalButtonText;
+                }
+            }
+        });
+    });
+</script>

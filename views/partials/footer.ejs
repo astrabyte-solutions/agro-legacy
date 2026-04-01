@@ -46,10 +46,13 @@
             <div>
                 <h4 class="text-lg font-bold mb-6 border-l-4 border-accent pl-4">Newsletter</h4>
                 <p class="text-gray-400 text-sm mb-4">Stay updated with market trends and prices.</p>
-                <div class="relative">
-                    <input type="email" placeholder="Your Email" class="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 focus:outline-none focus:border-accent">
-                    <button type="button" class="absolute right-2 top-2 bg-accent text-primary px-3 py-1 rounded-md font-bold">Join</button>
-                </div>
+                <form id="footerSubscribeForm" class="space-y-2">
+                    <div class="relative">
+                        <input name="email" type="email" required placeholder="Your Email" class="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 focus:outline-none focus:border-accent">
+                        <button type="submit" class="absolute right-2 top-2 bg-accent text-primary px-3 py-1 rounded-md font-bold">Join</button>
+                    </div>
+                    <p id="footerSubscribeStatus" class="hidden text-xs"></p>
+                </form>
             </div>
         </div>
 

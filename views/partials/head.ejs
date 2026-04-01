@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= (typeof seo !== 'undefined' && seo && seo.hreflangs && seo.hreflangs[0] && seo.hreflangs[0].lang) ? seo.hreflangs[0].lang : 'en' %>">
 <head>
     <script>
         window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };
@@ -16,7 +16,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/assets/favicon.png">
-    <title><%= title %></title>
+    <title><%= (typeof seo !== 'undefined' && seo && seo.title) ? seo.title : title %></title>
+    <meta name="description" content="<%= (typeof seo !== 'undefined' && seo && seo.description) ? seo.description : 'Surendra Pulses - trusted agro commodity processor and exporter from Indore, India.' %>">
+    <meta name="robots" content="<%= (typeof seo !== 'undefined' && seo && seo.robots) ? seo.robots : 'index, follow' %>">
+    <meta name="author" content="Surendra Pulses">
+    <meta name="theme-color" content="#1B5E20">
+    <link rel="canonical" href="<%= (typeof seo !== 'undefined' && seo && seo.canonical) ? seo.canonical : '' %>">
+    <% if (typeof seo !== 'undefined' && seo && Array.isArray(seo.hreflangs)) { %>
+    <% seo.hreflangs.forEach(function(langItem){ %>
+    <link rel="alternate" hreflang="<%= langItem.lang %>" href="<%= langItem.href %>">
+    <% }); %>
+    <% } %>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Surendra Pulses">
+    <meta property="og:title" content="<%= (typeof seo !== 'undefined' && seo && seo.title) ? seo.title : title %>">
+    <meta property="og:description" content="<%= (typeof seo !== 'undefined' && seo && seo.description) ? seo.description : 'Surendra Pulses - trusted agro commodity processor and exporter from Indore, India.' %>">
+    <meta property="og:url" content="<%= (typeof seo !== 'undefined' && seo && seo.canonical) ? seo.canonical : '' %>">
+    <meta property="og:image" content="<%= (typeof seo !== 'undefined' && seo && seo.image) ? seo.image : '' %>">
+    <meta name="twitter:card" content="<%= (typeof seo !== 'undefined' && seo && seo.twitterCard) ? seo.twitterCard : 'summary_large_image' %>">
+    <meta name="twitter:title" content="<%= (typeof seo !== 'undefined' && seo && seo.title) ? seo.title : title %>">
+    <meta name="twitter:description" content="<%= (typeof seo !== 'undefined' && seo && seo.description) ? seo.description : 'Surendra Pulses - trusted agro commodity processor and exporter from Indore, India.' %>">
+    <meta name="twitter:image" content="<%= (typeof seo !== 'undefined' && seo && seo.image) ? seo.image : '' %>">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -40,12 +60,16 @@
         }
     </script>
     <style>
+        .font-sans {
+            font-family: Inter, Segoe UI, Roboto, Helvetica Neue, Arial, system-ui, sans-serif;
+        }
         :root {
             --text-heading: #173f20;
             --text-body: #4b5563;
             --text-strong: #1f2937;
             --underline-accent: #C8A951;
         }
+        html,
         body {
             font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
             color: var(--text-body);
@@ -53,6 +77,30 @@
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+        }
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        li,
+        a,
+        button,
+        input,
+        select,
+        textarea,
+        label,
+        nav,
+        footer,
+        header,
+        section,
+        article,
+        span,
+        div {
+            font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui, sans-serif !important;
         }
         .font-heading, .font-display {
             font-family: Poppins, Montserrat, "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
@@ -104,5 +152,10 @@
         .success-animate { animation: slideUp 0.5s ease-out forwards; }
         @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
+    <% if (typeof seo !== 'undefined' && seo && Array.isArray(seo.schemas)) { %>
+    <% seo.schemas.forEach(function(schema){ %>
+    <script type="application/ld+json"><%- JSON.stringify(schema) %></script>
+    <% }); %>
+    <% } %>
     <% if (typeof extraHead !== 'undefined' && extraHead) { %><%- extraHead %><% } %>
 </head>

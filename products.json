@@ -6,8 +6,7 @@
     { "id": "chana", "label": "Chana (Bengal Gram)" },
     { "id": "beans", "label": "Cow Peas (CHAWLA)" },
     { "id": "white-chickpeas", "label": "White Chickpeas" },
-    { "id": "maize", "label": "Maize" },
-    { "id": "black-gram", "label": "Black Gram" }
+    { "id": "maize", "label": "Maize" }
   ],
   "products": [
     {
@@ -164,15 +163,6 @@
       "description": "Maize is supplied with controlled quality parameters suitable for human consumption or feed use as per buyer discussion."
     },
     {
-      "slug": "green-gram-dal",
-      "name": "Green Gram Dal",
-      "category": "moong",
-      "categoryLabel": "Moong",
-      "imageFile": "GREEN GRAM SPLIT.jpg",
-      "shortDescription": "Split moong dal line for regular trade and pack-size distribution.",
-      "description": "Green Gram Dal is processed for consistency in appearance and cooking quality, supporting recurring supply requirements."
-    },
-    {
       "slug": "black-eyed-beans",
       "name": "Black Eyed Beans",
       "category": "beans",
@@ -183,7 +173,7 @@
     },
     {
       "slug": "cow-peas-chawla",
-      "name": "Cow Peas (CHAWLA)",
+      "name": "Red Cow Peas",
       "category": "beans",
       "categoryLabel": "Cow Peas (CHAWLA)",
       "imageFile": "Cow Peas.jpg",
@@ -195,18 +185,9 @@
       "name": "Brown Eyed Beans",
       "category": "beans",
       "categoryLabel": "Cow Peas (CHAWLA)",
-      "imageFile": "Brown Eyed Beans.png",
+      "imageFile": "brown-eyed-beans.png",
       "shortDescription": "Brown eyed beans from supervised processing and cleaning operations.",
       "description": "Brown Eyed Beans are prepared for buyers seeking alternate bean lines from a single agro commodity supplier."
-    },
-    {
-      "slug": "black-gram",
-      "name": "Black Gram",
-      "category": "black-gram",
-      "categoryLabel": "Black Gram",
-      "imageFile": "Black Gram.jpg",
-      "shortDescription": "Black gram line for edible pulse distribution channels.",
-      "description": "Black Gram is supplied through a structured process framework designed for dependable quality and dispatch reliability."
     }
   ]
 }
